@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<title>QR code generating with vanilla js (SVG Element, Data URI PNG String, HTML Table Element)</title>
+		</head>
+	<body>
+		<h1><a href="https://github.com/englishextra/qrjs/">QR code generating with vanilla js (SVG Element, Data URI PNG String, HTML Table Element)</h1>
+		<div id=output></div>
+		<div id=debug></div>
+		<script src="./qrjs.js"></script>
+		<script>
+var svgElement = document.createElement("div"),
+u = "https://github.com",
+s = QRCode.generateSVG(u, {
+		ecclevel: "M",
+		fillcolor: "#FFFFFF",
+		textcolor: "#373737",
+		margin: 4,
+		modulesize: 8
+	});
+svgElement.appendChild(s);
+document.body.appendChild(svgElement);
+var dataUriPngImage = document.createElement("img"),
+u = "https://github.com",
+s = QRCode.generatePNG(u, {
+		ecclevel: "M",
+		format: "html",
+		fillcolor: "#FFFFFF",
+		textcolor: "#373737",
+		margin: 4,
+		modulesize: 8
+	});
+dataUriPngImage.src = s;
+document.body.appendChild(dataUriPngImage);
+var htmlTable = document.createElement("div"),
+u = "https://github.com",
+s = QRCode.generateHTML(u, {
+		ecclevel: "M",
+		fillcolor: "#FFFFFF",
+		textcolor: "#373737",
+		margin: 4,
+		modulesize: 8
+	});
+htmlTable.appendChild(s);
+document.body.appendChild(htmlTable);
+		</script>
+	</body>
+</html>
