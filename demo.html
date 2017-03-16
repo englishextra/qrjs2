@@ -21,6 +21,22 @@ s = QRCode.generateSVG(u, {
 	});
 svgElement.appendChild(s);
 document.body.appendChild(svgElement);
+if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
+	var dataUriSvgImage = document.createElement("img"),
+	u = "https://github.com",
+	s = QRCode.generateSVG(u, {
+			ecclevel: "M",
+			fillcolor: "#FFFFFF",
+			textcolor: "#373737",
+			margin: 4,
+			modulesize: 8
+		});
+	var XMLS = new XMLSerializer();
+	s = XMLS.serializeToString(s);
+	s = "data:image/svg+xml;base64," + window.btoa(unescape(encodeURIComponent(s)));
+	dataUriSvgImage.src = s;
+	document.body.appendChild(dataUriSvgImage);
+}
 var dataUriPngImage = document.createElement("img"),
 u = "https://github.com",
 s = QRCode.generatePNG(u, {
