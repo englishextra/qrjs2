@@ -3,6 +3,8 @@ QR code generating with vanilla js (SVG Element, Data URI PNG String, HTML Table
 
 Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
+[The Demo](http://codepen.io/englishextra/pen/NpwjKW)
+
 ## Fixes / Added Features
 
  - `generateSVG` now works in Edge 13 and IE 11
