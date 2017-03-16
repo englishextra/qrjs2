@@ -36,6 +36,31 @@ Will add an SVG element to parent DIV:
 </svg>
 ```
 
+### Data URI SVG String
+
+```
+if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
+	var dataUriSvgImage = document.createElement("img"),
+	u = "https://github.com",
+	s = QRCode.generateSVG(u, {
+			ecclevel: "M",
+			fillcolor: "#FFFFFF",
+			textcolor: "#373737",
+			margin: 4,
+			modulesize: 8
+		});
+	var XMLS = new XMLSerializer();
+	s = XMLS.serializeToString(s);
+	s = "data:image/svg+xml;base64," + window.btoa(unescape(encodeURIComponent(s)));
+	dataUriSvgImage.src = s;
+	document.body.appendChild(dataUriSvgImage);
+}
+```
+Will add a Data URI SVG string to IMG element's SRC attribute:
+```
+<img src="data:image/svg+xml;base64,...">
+```
+
 ### Data URI PNG String
 
 ```
@@ -52,7 +77,7 @@ s = QRCode.generatePNG(u, {
 dataUriPngImage.src = s;
 document.body.appendChild(dataUriPngImage);
 ```
-Will add a Data URI string to IMG element's SRC attribute:
+Will add a Data URI PNG string to IMG element's SRC attribute:
 ```
 <img src="data:image/png;base64,...">
 ```
