@@ -38,7 +38,7 @@ Will add an SVG element to parent DIV:
 </svg>
 ```
 
-### Data URI SVG String
+### Data URI SVG String with Data URI PNG String Fallback
 
 ```
 if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
@@ -56,30 +56,26 @@ if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
 	s = "data:image/svg+xml;base64," + window.btoa(unescape(encodeURIComponent(s)));
 	dataUriSvgImage.src = s;
 	document.body.appendChild(dataUriSvgImage);
+} else {
+	var dataUriPngImage = document.createElement("img"),
+	u = "https://github.com",
+	s = QRCode.generatePNG(u, {
+			ecclevel: "M",
+			format: "html",
+			fillcolor: "#FFFFFF",
+			textcolor: "#373737",
+			margin: 4,
+			modulesize: 8
+		});
+	dataUriPngImage.src = s;
+	document.body.appendChild(dataUriPngImage);
 }
 ```
 Will add a Data URI SVG string to IMG element's SRC attribute:
 ```
 <img src="data:image/svg+xml;base64,...">
 ```
-
-### Data URI PNG String
-
-```
-var dataUriPngImage = document.createElement("img"),
-u = "https://github.com",
-s = QRCode.generatePNG(u, {
-		ecclevel: "M",
-		format: "html",
-		fillcolor: "#FFFFFF",
-		textcolor: "#373737",
-		margin: 4,
-		modulesize: 8
-	});
-dataUriPngImage.src = s;
-document.body.appendChild(dataUriPngImage);
-```
-Will add a Data URI PNG string to IMG element's SRC attribute:
+Or a Data URI PNG string to IMG element's SRC attribute:
 ```
 <img src="data:image/png;base64,...">
 ```
