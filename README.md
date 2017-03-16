@@ -108,4 +108,6 @@ Will add an HTML table element to parent DIV:
 	</tbody>
 </table>
 ```
+## License
 
+qrjs is released under the [MIT license](https://opensource.org/licenses/MIT).
