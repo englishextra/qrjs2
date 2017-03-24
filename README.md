@@ -3,6 +3,8 @@ QR code generating with vanilla js (SVG Element, Data URI PNG String, HTML Table
 
 Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
+## Demo
+
 [codepen](http://codepen.io/englishextra/pen/NpwjKW)
 
 [jsfiddle](https://jsfiddle.net/englishextra/Lp37dL94/show/light/)
