@@ -1,0 +1,38 @@
+{
+  "name": "qrjs",
+  "version": "0.1.1",
+  "description": "QR code generating with vanilla js (SVG Element, Data URI PNG String, HTML table element).",
+  "keywords": ["qrjs",
+  "qr",
+  "js",
+  "web"],
+  "files": ["qrjs.js"],
+  "main": "qrjs.js",
+  "filename": "qrjs.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/englishextra/qrjs.git"
+  },
+  "autoupdate": {
+    "source": "git",
+    "target": "git://github.com/englishextra/qrjs.git",
+    "fileMap": [{
+      "basePath": "",
+      "files": ["qrjs*"]
+    }]
+  },
+  "email": "englishextra@mail.ru",
+  "url": "https://github.com/englishextra/qrjs/issues",
+  "homepage": "https://github.com/englishextra/qrjs",
+  "maintainers": {
+    "name": "Serguei Shimansky",
+    "email": "englishextra@mail.ru",
+    "url": "https://github.com/englishextra"
+  },
+  "author": {
+    "name": "englishextra",
+    "email": "englishextra@mail.ru",
+    "url": "https://github.com/englishextra"
+  },
+  "license": "(MIT)"
+}

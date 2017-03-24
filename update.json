@@ -1,0 +1,11 @@
+{
+  "packageManager": "github",
+  "name": "qrjs",
+  "repo": "englishextra/qrjs",
+  "files": {
+    "basePath": "",
+    "include": ["qrjs.js",
+    "qrjs.min.js"],
+    "exclude": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "qrjs",
+  "version": "0.1.1",
+  "main": "qrjs.js",
+  "author": "englishextra",
+  "ignore": [".html",
+  ".md",
+  "update.json",
+  "bower.json",
+  "gruntfile.js",
+  "component.json",
+  "package.json"]
+}
