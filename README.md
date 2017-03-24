@@ -1,9 +1,10 @@
-# qrjs
+# qrjs2
 QR code generating with vanilla js (SVG Element, Data URI PNG String, HTML Table Element)
 
 Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
 [The Demo](http://codepen.io/englishextra/pen/NpwjKW)
+[Another Demo](https://jsfiddle.net/englishextra/Lp37dL94/)
 
 ## Fixes / Added Features
 
