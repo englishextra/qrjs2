@@ -117,4 +117,4 @@ Will add an HTML table element to parent DIV:
 ```
 ## License
 
-qrjs is released under the [MIT license](https://opensource.org/licenses/MIT).
+qrjs2 is released under the [MIT license](https://opensource.org/licenses/MIT).
