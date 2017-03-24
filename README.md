@@ -13,6 +13,15 @@ Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
 ## Usage and Output
 
+### Install
+
+```
+npm install qrjs2
+```
+```
+bower install qrjs2
+```
+
 ### SVG Element (yeah, give it to me)
 
 ```

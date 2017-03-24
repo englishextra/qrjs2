@@ -1,1 +1,1 @@
-bower register qrjs git://github.com/englishextra/qrjs2.git
+bower register qrjs2 git://github.com/englishextra/qrjs2.git
