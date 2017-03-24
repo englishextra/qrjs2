@@ -1,7 +1,7 @@
 {
-  "name": "qrjs",
-  "version": "0.1.1",
-  "main": "qrjs.js",
+  "name": "qrjs2",
+  "version": "0.1.2",
+  "main": "qrjs2.js",
   "author": "englishextra",
   "ignore": [".html",
   ".md",

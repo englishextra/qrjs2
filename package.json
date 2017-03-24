@@ -1,21 +1,21 @@
 {
-  "name": "qrjs",
-  "version": "0.1.1",
+  "name": "qrjs2",
+  "version": "0.1.2",
   "description": "QR code generating with vanilla js (SVG Element, Data URI PNG String, HTML table element).",
-  "keywords": ["qrjs",
+  "keywords": ["qrjs2",
   "qr",
   "js",
   "web"],
-  "files": ["qrjs.js"],
-  "main": "qrjs.js",
-  "filename": "qrjs.js",
+  "files": ["qrjs2.js"],
+  "main": "qrjs2.js",
+  "filename": "qrjs2.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/englishextra/qrjs.git"
+    "url": "git://github.com/englishextra/qrjs2.git"
   },
   "autoupdate": {
     "source": "git",
-    "target": "git://github.com/englishextra/qrjs.git",
+    "target": "git://github.com/englishextra/qrjs2.git",
     "fileMap": [{
       "basePath": "",
       "files": ["qrjs*"]
@@ -23,7 +23,7 @@
   },
   "email": "englishextra@mail.ru",
   "url": "https://github.com/englishextra/qrjs/issues",
-  "homepage": "https://github.com/englishextra/qrjs",
+  "homepage": "https://github.com/englishextra/qrjs2",
   "maintainers": {
     "name": "Serguei Shimansky",
     "email": "englishextra@mail.ru",
