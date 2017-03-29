@@ -21,6 +21,11 @@
       "files": ["qrjs*"]
     }]
   },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "jshint": "^2.9.4"
+  },
   "email": "englishextra@mail.ru",
   "url": "https://github.com/englishextra/qrjs/issues",
   "homepage": "https://github.com/englishextra/qrjs2",
