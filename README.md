@@ -3,6 +3,12 @@ QR code generating with vanilla js (SVG Element, Data URI PNG String, HTML Table
 
 Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
+[![NPM](https://nodei.co/npm/qrjs2.png?downloads=true)](https://nodei.co/npm/qrjs2/)
+
+[![npm](https://img.shields.io/npm/v/qrjs2.svg)](https://github.com/englishextra/qrjs2)
+[![Bower](https://img.shields.io/bower/v/qrjs2.svg)](https://github.com/englishextra/qrjs2)
+[![CDNJS](https://img.shields.io/cdnjs/v/qrjs2.svg)](https://cdnjs.com/libraries/qrjs2)
+
 ## Demo
 
 [codepen](http://codepen.io/englishextra/pen/NpwjKW)
