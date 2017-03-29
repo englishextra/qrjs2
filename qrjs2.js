@@ -15,7 +15,6 @@
 /* jshint shadow: true */
 /* jshint sub:true */
 /* jshint -W041 */
-;
 (function (root, name, definition) {
 	root[name] = definition();
 })("undefined" !== typeof window ? window : this, 'QRCode', function () {
