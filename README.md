@@ -25,6 +25,19 @@ Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
  - foreground and background become  customizeable
  - `innerHTML` replaced with `document.createDocumentFragment()`
 
+## CDN
+
+### jsDelivr
+
+```
+https://cdn.jsdelivr.net/qrjs2/latest/qrjs2.min.js
+```
+
+### unpkg
+```
+https://unpkg.com/qrjs2@latest
+```
+
 ## Usage and Output
 
 ### Install
