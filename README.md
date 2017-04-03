@@ -7,7 +7,7 @@ Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
 [![npm](https://img.shields.io/npm/v/qrjs2.svg)](https://github.com/englishextra/qrjs2)
 [![Bower](https://img.shields.io/bower/v/qrjs2.svg)](https://github.com/englishextra/qrjs2)
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://travis-ci.org/englishextra/qrjs2)
+[![Build Status](https://travis-ci.org/englishextra/qrjs2.svg?branch=master)](https://travis-ci.org/englishextra/qrjs2)
 [![bitHound Overall Score](https://www.bithound.io/github/englishextra/qrjs2/badges/score.svg)](https://www.bithound.io/github/englishextra/qrjs2)
 [![CDNJS](https://img.shields.io/cdnjs/v/qrjs2.svg)](https://cdnjs.com/libraries/qrjs2)
 
