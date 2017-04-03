@@ -26,6 +26,9 @@
     "grunt-contrib-jshint": "^1.1.0",
     "jshint": "^2.9.4"
   },
+  "scripts": {
+    "test": "grunt --verbose"
+  },
   "email": "englishextra@mail.ru",
   "url": "https://github.com/englishextra/qrjs/issues",
   "homepage": "https://github.com/englishextra/qrjs2",
