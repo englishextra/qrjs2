@@ -1,7 +1,7 @@
 {
 	"name": "qrjs2",
 	"repo": "englishextra/qrjs2",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"styles": ["qrjs2.js"],
 	"author": "englishextra",
 	"license": "(MIT)"
