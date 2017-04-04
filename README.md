@@ -22,7 +22,7 @@ Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 ## Fixes / Added Features
 
  - `generateSVG` now works in Edge 13 and IE 11
- - foreground and background become  customizeable
+ - `textcolor` and `fillcolor` options introduced
  - `innerHTML` replaced with `document.createDocumentFragment()`
 
 ## CDN
