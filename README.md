@@ -1,5 +1,5 @@
 # qrjs2
-QR code generating with vanilla js (SVG Element, Data URI PNG String, HTML Table Element).
+QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element).
 
 Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
