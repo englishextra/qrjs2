@@ -7,8 +7,8 @@
  * apply. In the other words, you can always do what you want.
  * added options properties: fillcolor and textcolor
  * svg now works in Edge 13 and IE 11
- * gist.github.com/englishextra/b46969e3382ef737c611bb59d837220b
- * source: github.com/lifthrasiir/qr.js/blob/v0.0.20110119/qr.js
+ * @see {@link https://gist.github.com/englishextra/b46969e3382ef737c611bb59d837220b}
+ * @see {@link https://github.com/lifthrasiir/qr.js/blob/v0.0.20110119/qr.js}
  * passes jshint with suppressing comments
  */
 /* jslint bitwise: true */
