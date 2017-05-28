@@ -15,7 +15,7 @@ Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
 [codepen](http://codepen.io/englishextra/pen/NpwjKW)
 
-[jsfiddle](https://jsfiddle.net/englishextra/Lp37dL94/show/light/)
+[jsfiddle](https://jsfiddle.net/englishextra/Lp37dL94/show/)
 
 [jsbin](https://jsbin.com/hobetuh/)
 
