@@ -13,7 +13,7 @@ Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
 ## Demo
 
-[codepen](http://codepen.io/englishextra/pen/NpwjKW)
+[codepen](https://codepen.io/englishextra/full/NpwjKW)
 
 [jsfiddle](https://jsfiddle.net/englishextra/Lp37dL94/show/)
 
