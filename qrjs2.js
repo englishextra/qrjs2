@@ -211,7 +211,7 @@
 		var modulus = poly.slice(0);
 		var polylen = poly.length,
 		genpolylen = genpoly.length;
-		for (var i = 0; i < genpolylen; ++i) {
+		for (var k = 0; k < genpolylen; ++k) {
 			modulus.push(0);
 		}
 		for (var i = 0; i < polylen; ) {
