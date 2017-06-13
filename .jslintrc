@@ -18,9 +18,9 @@
 	  "document",
 	  "navigator",
 	  "console",
-	  "window"
+	  "window",
+	  "self"
   ],
-
   /*** Enforcing options ***/
   // Set these to `true` to enforce, or `false` to relax.
   "adsafe":     false,
