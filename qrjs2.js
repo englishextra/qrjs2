@@ -389,22 +389,26 @@
 			groups = [0];
 			for (var j = 0; j < n; ) {
 				var k;
-				for (k = 0; j < n && row[j]; ++k)
+				for (k = 0; j < n && row[j]; ++k) {
 					++j;
+				}
 				groups.push(k);
-				for (k = 0; j < n && !row[j]; ++k)
+				for (k = 0; j < n && !row[j]; ++k) {
 					++j;
+				}
 				groups.push(k);
 			}
 			score += evaluategroup(groups);
 			groups = [0];
 			for (var j = 0; j < n; ) {
 				var k;
-				for (k = 0; j < n && matrix[j][i]; ++k)
+				for (k = 0; j < n && matrix[j][i]; ++k) {
 					++j;
+				}
 				groups.push(k);
-				for (k = 0; j < n && !matrix[j][i]; ++k)
+				for (k = 0; j < n && !matrix[j][i]; ++k) {
 					++j;
+				}
 				groups.push(k);
 			}
 			score += evaluategroup(groups);
