@@ -319,7 +319,7 @@
 		var k = 0,
 		dir = -1;
 		for (var i = n - 1; i >= 0; i -= 2) {
-			if (i == 6) {
+			if (i === 6) {
 				--i;
 			}
 			var jj = (dir < 0 ? n - 1 : 0);
@@ -501,7 +501,7 @@
 			} else if (ver < 1 || ver > 40) {
 				throw "invalid version";
 			}
-			if (mask != -1 && (mask < 0 || mask > 8)) {
+			if (mask !== -1 && (mask < 0 || mask > 8)) {
 				throw "invalid mask";
 			}
 			return generate(data, ver, mode, ecclevel, mask);
@@ -609,8 +609,9 @@
 			context;
 			canvas.width = canvas.height = size;
 			context = canvas.getContext("2d");
-			if (!context)
+			if (!context) {
 				throw "canvas support is needed for PNG output";
+			}
 			context.fillStyle = fillcolor;
 			context.fillRect(0, 0, size, size);
 			context.fillStyle = textcolor;
