@@ -54,21 +54,21 @@
 		ALPHANUMERIC_MAP["0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ $%*+-./:".charAt(i)] = i;
 	}
 	var MASKFUNCS = [function (i, j) {
-			return (i + j) % 2 == 0;
+			return (i + j) % 2 === 0;
 		}, function (i, j) {
-			return i % 2 == 0;
+			return i % 2 === 0;
 		}, function (i, j) {
-			return j % 3 == 0;
+			return j % 3 === 0;
 		}, function (i, j) {
-			return (i + j) % 3 == 0;
+			return (i + j) % 3 === 0;
 		}, function (i, j) {
-			return (((i / 2) | 0) + ((j / 3) | 0)) % 2 == 0;
+			return (((i / 2) | 0) + ((j / 3) | 0)) % 2 === 0;
 		}, function (i, j) {
-			return (i * j) % 2 + (i * j) % 3 == 0;
+			return (i * j) % 2 + (i * j) % 3 === 0;
 		}, function (i, j) {
-			return ((i * j) % 2 + (i * j) % 3) % 2 == 0;
+			return ((i * j) % 2 + (i * j) % 3) % 2 === 0;
 		}, function (i, j) {
-			return ((i + j) % 2 + (i * j) % 3) % 2 == 0;
+			return ((i + j) % 2 + (i * j) % 3) % 2 === 0;
 		}
 	];
 	var needsverinfo = function (ver) {
@@ -185,7 +185,7 @@
 				pack(ALPHANUMERIC_MAP[data.charAt(i - 1)] * 45 +
 					ALPHANUMERIC_MAP[data.charAt(i)], 11);
 			}
-			if (datalen % 2 == 1) {
+			if (datalen % 2 === 1) {
 				pack(ALPHANUMERIC_MAP[data.charAt(i - 1)], 6);
 			}
 			break;
@@ -295,8 +295,8 @@
 		var aligns = v[2],
 		m = aligns.length;
 		for (var i = 0; i < m; ++i) {
-			var minj = (i == 0 || i == m - 1 ? 1 : 0),
-			maxj = (i == 0 ? m - 1 : m);
+			var minj = (i === 0 || i == m - 1 ? 1 : 0),
+			maxj = (i === 0 ? m - 1 : m);
 			for (var j = minj; j < maxj; ++j) {
 				blit(aligns[i], aligns[j], 5, 5, [0x1f, 0x11, 0x15, 0x11, 0x1f]);
 			}
@@ -485,7 +485,7 @@
 				} else {
 					mode = MODE_OCTET;
 				}
-			} else if (!(mode == MODE_NUMERIC || mode == MODE_ALPHANUMERIC || mode == MODE_OCTET)) {
+			} else if (!(mode ===  MODE_NUMERIC || mode ===  MODE_ALPHANUMERIC || mode ===  MODE_OCTET)) {
 				throw "invalid or unsupported mode";
 			}
 			data = validatedata(mode, data);
@@ -608,7 +608,7 @@
 
 			var matrix = QRCode["generate"](data, options);
 			var modsize = Math.max(options.modulesize || 5, 0.5);
-			var margin = Math.max(options.margin != null ? options.margin : 4, 0.0);
+			var margin = Math.max((options.margin !== null && options.margin !== undefined) ? options.margin : 4, 0.0);
 			var n = matrix.length;
 			var size = modsize * (n + 2 * margin);
 			var canvas = document.createElement("canvas"),
