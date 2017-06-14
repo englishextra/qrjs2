@@ -374,7 +374,7 @@
 			}
 			for (var i = 5; i < groups.length; i += 2) {
 				var p = groups[i];
-				if (groups[i - 1] == p && groups[i - 2] == 3 * p && groups[i - 3] == p && groups[i - 4] == p && (groups[i - 5] >= 4 * p || groups[i + 1] >= 4 * p)) {
+				if (groups[i - 1] === p && groups[i - 2] == 3 * p && groups[i - 3] === p && groups[i - 4] === p && (groups[i - 5] >= 4 * p || groups[i + 1] >= 4 * p)) {
 					score += PENALTY_FINDERLIKE;
 				}
 			}
@@ -417,7 +417,7 @@
 			for (var j = 1; j < n; ++j) {
 				var p = row[j];
 				nblacks += p;
-				if (row[j - 1] == p && nextrow[j] === p && nextrow[j - 1] === p) {
+				if (row[j - 1] === p && nextrow[j] === p && nextrow[j - 1] === p) {
 					score += PENALTY_TWOBYTWO;
 				}
 			}
