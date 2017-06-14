@@ -295,7 +295,7 @@
 		var aligns = v[2],
 		m = aligns.length;
 		for (var i = 0; i < m; ++i) {
-			var minj = (i === 0 || i == m - 1 ? 1 : 0),
+			var minj = (i === 0 || i === m - 1 ? 1 : 0),
 			maxj = (i === 0 ? m - 1 : m);
 			for (var j = minj; j < maxj; ++j) {
 				blit(aligns[i], aligns[j], 5, 5, [0x1f, 0x11, 0x15, 0x11, 0x1f]);
@@ -374,7 +374,7 @@
 			}
 			for (var i = 5; i < groups.length; i += 2) {
 				var p = groups[i];
-				if (groups[i - 1] === p && groups[i - 2] == 3 * p && groups[i - 3] === p && groups[i - 4] === p && (groups[i - 5] >= 4 * p || groups[i + 1] >= 4 * p)) {
+				if (groups[i - 1] === p && groups[i - 2] === 3 * p && groups[i - 3] === p && groups[i - 4] === p && (groups[i - 5] >= 4 * p || groups[i + 1] >= 4 * p)) {
 					score += PENALTY_FINDERLIKE;
 				}
 			}
