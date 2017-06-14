@@ -514,10 +514,8 @@
 		},
 		"generateHTML": function (data, options) {
 			options = options || {};
-
 			var fillcolor = options.fillcolor ? options.fillcolor : "#FFFFFF";
 			var textcolor = options.textcolor ? options.textcolor : "#000000";
-
 			var matrix = QRCode["generate"](data, options);
 			var modsize = Math.max(options.modulesize || 5, 0.5);
 			var margin = Math.max(options.margin !== null ? options.margin : 4, 0.0);
@@ -535,20 +533,16 @@
 			}
 			e.className = "qrcode";
 			/* e.innerHTML = html.join("") + "</table>"; */
-
 			var range = document.createRange();
 			range.selectNodeContents(e);
 			var frag = range.createContextualFragment(html.join("") + "</table>");
 			e.appendChild(frag);
-
 			return e;
 		},
 		"generateSVG": function (data, options) {
 			options = options || {};
-
 			var fillcolor = options.fillcolor ? options.fillcolor : "#FFFFFF";
 			var textcolor = options.textcolor ? options.textcolor : "#000000";
-
 			var matrix = QRCode["generate"](data, options);
 			var n = matrix.length;
 			var modsize = Math.max(options.modulesize || 5, 0.5);
@@ -558,16 +552,12 @@
 			var e = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 			e.setAttribute("viewBox", "0 0 " + size + " " + size);
 			e.setAttribute("style", "shape-rendering:crispEdges");
-
 			var frag = document.createDocumentFragment();
-
 			/* var svg = ['<style scoped>.bg{fill:' + fillcolor + '}.fg{fill:' + textcolor + '}</style>', '<rect class="bg" x="0" y="0"', 'width="' + size + '" height="' + size + '"/>', ]; */
 			var style = document.createElementNS("http://www.w3.org/2000/svg", "style");
 			style.appendChild(document.createTextNode(".bg{fill:" + fillcolor + "}.fg{fill:" + textcolor + "}"));
 			style.setAttribute("scoped", "scoped");
-
 			frag.appendChild(style);
-
 			var createRect = function (c, f, x, y, s) {
 				var fg = document.createElementNS("http://www.w3.org/2000/svg", "rect") || "";
 				fg.setAttributeNS(null, "class", c);
@@ -578,11 +568,8 @@
 				fg.setAttributeNS(null, "height", s);
 				return fg;
 			};
-
 			frag.appendChild(createRect("bg", "none", 0, 0, size));
-
 			var yo = margin * modsize;
-
 			for (var y = 0; y < n; ++y) {
 				var xo = margin * modsize;
 				for (var x = 0; x < n; ++x) {
@@ -594,18 +581,14 @@
 				}
 				yo += modsize;
 			}
-
 			/* e.innerHTML = svg.join(""); */
 			e.appendChild(frag);
-
 			return e;
 		},
 		"generatePNG": function (data, options) {
 			options = options || {};
-
 			var fillcolor = options.fillcolor ? options.fillcolor : "#FFFFFF";
 			var textcolor = options.textcolor ? options.textcolor : "#000000";
-
 			var matrix = QRCode["generate"](data, options);
 			var modsize = Math.max(options.modulesize || 5, 0.5);
 			var margin = Math.max((options.margin !== null && options.margin !== undefined) ? options.margin : 4, 0.0);
