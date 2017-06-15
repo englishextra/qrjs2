@@ -11,10 +11,10 @@
  * @see {@link https://github.com/lifthrasiir/qr.js/blob/v0.0.20110119/qr.js}
  * passes jshint with suppressing comments
  */
-/* jslint bitwise: true */
-/* jshint shadow: true */
-/* jshint sub:true */
-/* jshint -W041 */
+/*jslint bitwise: true */
+/*jshint shadow: true */
+/*jshint sub:true */
+/*jshint -W041 */
 (function (root, name, definition) {
 	root[name] = definition();
 }("undefined" !== typeof window ? window : this, "QRCode", function () {
@@ -616,7 +616,7 @@
 	};
 	return QRCode;
 }));
-/* jslint bitwise: false */
-/* jshint shadow: false */
-/* jshint sub: false */
-/* jshint +W041 */
+/*jslint bitwise: false */
+/*jshint shadow: false */
+/*jshint sub: false */
+/*jshint +W041 */
