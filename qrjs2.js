@@ -11,7 +11,7 @@
  * @see {@link https://github.com/lifthrasiir/qr.js/blob/v0.0.20110119/qr.js}
  * passes jshint with suppressing comments
  */
-/*jslint bitwise: true */
+/*jshint bitwise: false */
 /*jshint shadow: true */
 /*jshint sub:true */
 /*jshint -W041 */
@@ -616,7 +616,7 @@
 	};
 	return QRCode;
 }));
-/*jslint bitwise: false */
+/*jshint bitwise: true */
 /*jshint shadow: false */
 /*jshint sub: false */
 /*jshint +W041 */
