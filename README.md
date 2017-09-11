@@ -31,7 +31,7 @@ Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 ### jsDelivr
 
 ```
-https://cdn.jsdelivr.net/qrjs2/latest/qrjs2.min.js
+https://cdn.jsdelivr.net/npm/qrjs2@0.1.3/qrjs2.min.js
 ```
 
 ### unpkg
