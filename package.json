@@ -1,55 +1,55 @@
 {
-  "name": "qrjs2",
-  "version": "0.1.3",
-  "description": "QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element).",
-  "keywords": ["qr",
-  "qrcode",
-  "qr-code",
-  "qrcode-generator",
-  "svg",
-  "svg-images",
-  "js",
-  "javascript",
-  "vanilla-js",
-  "webapp",
-  "app",
-  "front-end",
-  "html"],
-  "files": ["qrjs2.js"],
-  "main": "qrjs2.js",
-  "filename": "qrjs2.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/englishextra/qrjs2.git"
-  },
-  "autoupdate": {
-    "source": "git",
-    "target": "git://github.com/englishextra/qrjs2.git",
-    "fileMap": [{
-      "basePath": "",
-      "files": ["qrjs*"]
-    }]
-  },
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-jshint": "^1.1.0",
-    "jshint": "^2.9.4"
-  },
-  "scripts": {
-    "test": "grunt --verbose"
-  },
-  "email": "englishextra@mail.ru",
-  "url": "https://github.com/englishextra/qrjs/issues",
-  "homepage": "https://github.com/englishextra/qrjs2",
-  "maintainers": {
-    "name": "Serguei Shimansky",
-    "email": "englishextra@mail.ru",
-    "url": "https://github.com/englishextra"
-  },
-  "author": {
-    "name": "englishextra",
-    "email": "englishextra@mail.ru",
-    "url": "https://github.com/englishextra"
-  },
-  "license": "(MIT)"
+	"name": "qrjs2",
+	"version": "0.1.3",
+	"description": "QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element).",
+	"keywords": ["qr",
+	"qrcode",
+	"qr-code",
+	"qrcode-generator",
+	"svg",
+	"svg-images",
+	"js",
+	"javascript",
+	"vanilla-js",
+	"webapp",
+	"app",
+	"front-end",
+	"html"],
+	"files": ["qrjs2.js"],
+	"main": "qrjs2.js",
+	"filename": "qrjs2.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/englishextra/qrjs2.git"
+	},
+	"autoupdate": {
+		"source": "git",
+		"target": "git://github.com/englishextra/qrjs2.git",
+		"fileMap": [{
+			"basePath": "",
+			"files": ["qrjs*"]
+		}]
+	},
+	"devDependencies": {
+		"grunt": "^1.0.1",
+		"grunt-contrib-jshint": "^1.1.0",
+		"jshint": "^2.9.4"
+	},
+	"scripts": {
+		"test": "grunt --verbose"
+	},
+	"email": "englishextra@mail.ru",
+	"url": "https://github.com/englishextra/qrjs/issues",
+	"homepage": "https://github.com/englishextra/qrjs2",
+	"maintainers": {
+		"name": "Serguei Shimansky",
+		"email": "englishextra@mail.ru",
+		"url": "https://github.com/englishextra"
+	},
+	"author": {
+		"name": "englishextra",
+		"email": "englishextra@mail.ru",
+		"url": "https://github.com/englishextra"
+	},
+	"license": "(MIT)"
 }
