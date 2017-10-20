@@ -25,8 +25,8 @@
 	MODE_OCTET = 4,
 	MODE_KANJI = 8;
 	var NUMERIC_REGEXP = /^\d*$/;
-	var ALPHANUMERIC_REGEXP = /^[A-Za-z0-9 $%*+\-./:] * $ / ;
-	var ALPHANUMERIC_OUT_REGEXP = /^[A-Z0-9 $%*+\-./:] * $ / ;
+	var ALPHANUMERIC_REGEXP = /^[A-Za-z0-9 $%*+\-./:]*$/;
+	var ALPHANUMERIC_OUT_REGEXP = /^[A-Z0-9 $%*+\-./:]*$/;
 	var ECCLEVEL_L = 1,
 	ECCLEVEL_M = 0,
 	ECCLEVEL_Q = 3,
