@@ -30,15 +30,15 @@ Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
 #### jsDelivr
 
-`https://cdn.jsdelivr.net/gh/englishextra/qrjs2@0.1.4/qrjs2.min.js`
+`https://cdn.jsdelivr.net/gh/englishextra/qrjs2@0.1.5/qrjs2.min.js`
 
-`https://cdn.jsdelivr.net/gh/englishextra/qrjs2@0.1.4/qrjs2.min.css`
+`https://cdn.jsdelivr.net/gh/englishextra/qrjs2@0.1.5/qrjs2.min.css`
 
 #### unpkg
 
-`https://unpkg.com/qrjs2@0.1.4/qrjs2.js`
+`https://unpkg.com/qrjs2@0.1.5/qrjs2.js`
 
-`https://unpkg.com/qrjs2@0.1.4/qrjs2.css`
+`https://unpkg.com/qrjs2@0.1.5/qrjs2.css`
 
 ## Usage and Output
 
