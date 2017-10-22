@@ -552,11 +552,13 @@
 			var e = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 			e.setAttribute("viewBox", "0 0 " + size + " " + size);
 			e.setAttribute("style", "shape-rendering:crispEdges");
+			var qrcodeId = "qrcode" + Date.now();
+			e.setAttribute("id", qrcodeId);
 			var frag = document.createDocumentFragment();
 			/* var svg = ['<style scoped>.bg{fill:' + fillcolor + '}.fg{fill:' + textcolor + '}</style>', '<rect class="bg" x="0" y="0"', 'width="' + size + '" height="' + size + '"/>', ]; */
 			var style = document.createElementNS("http://www.w3.org/2000/svg", "style");
-			style.appendChild(document.createTextNode(".bg{fill:" + fillcolor + "}.fg{fill:" + textcolor + "}"));
-			style.setAttribute("scoped", "scoped");
+			style.appendChild(document.createTextNode("#" + qrcodeId + " .bg{fill:" + fillcolor + "}#" + qrcodeId + " .fg{fill:" + textcolor + "}"));
+			/* style.setAttribute("scoped", "scoped"); */
 			frag.appendChild(style);
 			var createRect = function (c, f, x, y, s) {
 				var fg = document.createElementNS("http://www.w3.org/2000/svg", "rect") || "";
