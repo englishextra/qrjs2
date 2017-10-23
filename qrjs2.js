@@ -18,6 +18,7 @@
 (function (root, name, definition) {
 	root[name] = definition();
 }("undefined" !== typeof window ? window : this, "QRCode", function () {
+	var length = "length";
 	var VERSIONS = [null, [[10, 7, 17, 13], [1, 1, 1, 1], []], [[16, 10, 28, 22], [1, 1, 1, 1], [4, 16]], [[26, 15, 22, 18], [1, 1, 2, 2], [4, 20]], [[18, 20, 16, 26], [2, 1, 4, 2], [4, 24]], [[24, 26, 22, 18], [2, 1, 4, 4], [4, 28]], [[16, 18, 28, 24], [4, 2, 4, 4], [4, 32]], [[18, 20, 26, 18], [4, 2, 5, 6], [4, 20, 36]], [[22, 24, 26, 22], [4, 2, 6, 6], [4, 22, 40]], [[22, 30, 24, 20], [5, 2, 8, 8], [4, 24, 44]], [[26, 18, 28, 24], [5, 4, 8, 8], [4, 26, 48]], [[30, 20, 24, 28], [5, 4, 11, 8], [4, 28, 52]], [[22, 24, 28, 26], [8, 4, 11, 10], [4, 30, 56]], [[22, 26, 22, 24], [9, 4, 16, 12], [4, 32, 60]], [[24, 30, 24, 20], [9, 4, 16, 16], [4, 24, 44, 64]], [[24, 22, 24, 30], [10, 6, 18, 12], [4, 24, 46, 68]], [[28, 24, 30, 24], [10, 6, 16, 17], [4, 24, 48, 72]], [[28, 28, 28, 28], [11, 6, 19, 16], [4, 28, 52, 76]], [[26, 30, 28, 28], [13, 6, 21, 18], [4, 28, 54, 80]], [[26, 28, 26, 26], [14, 7, 25, 21], [4, 28, 56, 84]], [[26, 28, 28, 30], [16, 8, 25, 20], [4, 32, 60, 88]], [[26, 28, 30, 28], [17, 8, 25, 23], [4, 26, 48, 70, 92]], [[28, 28, 24, 30], [17, 9, 34, 23], [4, 24, 48, 72, 96]], [[28, 30, 30, 30], [18, 9, 30, 25], [4, 28, 52, 76, 100]], [[28, 30, 30, 30], [20, 10, 32, 27], [4, 26, 52, 78, 104]], [[28, 26, 30, 30], [21, 12, 35, 29], [4, 30, 56, 82, 108]], [[28, 28, 30, 28], [23, 12, 37, 34], [4, 28, 56, 84, 112]], [[28, 30, 30, 30], [25, 12, 40, 34], [4, 32, 60, 88, 116]], [[28, 30, 30, 30], [26, 13, 42, 35], [4, 24, 48, 72, 96, 120]], [[28, 30, 30, 30], [28, 14, 45, 38], [4, 28, 52, 76, 100, 124]], [[28, 30, 30, 30], [29, 15, 48, 40], [4, 24, 50, 76, 102, 128]], [[28, 30, 30, 30], [31, 16, 51, 43], [4, 28, 54, 80, 106, 132]], [[28, 30, 30, 30], [33, 17, 54, 45], [4, 32, 58, 84, 110, 136]], [[28, 30, 30, 30], [35, 18, 57, 48], [4, 28, 56, 84, 112, 140]], [[28, 30, 30, 30], [37, 19, 60, 51], [4, 32, 60, 88, 116, 144]], [[28, 30, 30, 30], [38, 19, 63, 53], [4, 28, 52, 76, 100, 124, 148]], [[28, 30, 30, 30], [40, 20, 66, 56], [4, 22, 48, 74, 100, 126, 152]], [[28, 30, 30, 30], [43, 21, 70, 59], [4, 26, 52, 78, 104, 130, 156]], [[28, 30, 30, 30], [45, 22, 74, 62], [4, 30, 56, 82, 108, 134, 160]], [[28, 30, 30, 30], [47, 24, 77, 65], [4, 24, 52, 80, 108, 136, 164]], [[28, 30, 30, 30], [49, 25, 81, 68], [4, 28, 56, 84, 112, 140, 168]]];
 	var MODE_TERMINATOR = 0;
 	var MODE_NUMERIC = 1,
@@ -83,8 +84,8 @@
 		if (needsverinfo(ver)) {
 			nbits -= 36;
 		}
-		if (v[2].length) {
-			nbits -= 25 * v[2].length * v[2].length - 10 * v[2].length - 55;
+		if (v[2][length]) {
+			nbits -= 25 * v[2][length] * v[2][length] - 10 * v[2][length] - 55;
 		}
 		return nbits;
 	};
@@ -134,7 +135,7 @@
 		case MODE_OCTET:
 			if (typeof data === "string") {
 				var newdata = [];
-				for (var i = 0; i < data.length; ++i) {
+				for (var i = 0; i < data[length]; ++i) {
 					var ch = data.charCodeAt(i);
 					if (ch < 0x80) {
 						newdata.push(ch);
@@ -156,7 +157,7 @@
 		var buf = [];
 		var bits = 0,
 		remaining = 8;
-		var datalen = data.length;
+		var datalen = data[length];
 		var pack = function (x, n) {
 			if (n >= remaining) {
 				buf.push(bits | (x >> (n -= remaining)));
@@ -199,18 +200,18 @@
 		if (remaining < 8) {
 			buf.push(bits);
 		}
-		while (buf.length + 1 < maxbuflen) {
+		while (buf[length] + 1 < maxbuflen) {
 			buf.push(0xec, 0x11);
 		}
-		if (buf.length < maxbuflen) {
+		if (buf[length] < maxbuflen) {
 			buf.push(0xec);
 		}
 		return buf;
 	};
 	var calculateecc = function (poly, genpoly) {
 		var modulus = poly.slice(0);
-		var polylen = poly.length,
-		genpolylen = genpoly.length;
+		var polylen = poly[length],
+		genpolylen = genpoly[length];
 		for (var k = 0; k < genpolylen; ++k) {
 			modulus.push(0);
 		}
@@ -226,9 +227,9 @@
 	};
 	var augumenteccs = function (poly, nblocks, genpoly) {
 		var subsizes = [];
-		var subsize = (poly.length / nblocks) | 0,
+		var subsize = (poly[length] / nblocks) | 0,
 		subsize0 = 0;
-		var pivot = nblocks - poly.length % nblocks;
+		var pivot = nblocks - poly[length] % nblocks;
 		for (var i = 0; i < pivot; ++i) {
 			subsizes.push(subsize0);
 			subsize0 += subsize;
@@ -243,7 +244,7 @@
 			eccs.push(calculateecc(poly.slice(subsizes[i], subsizes[i + 1]), genpoly));
 		}
 		var result = [];
-		var nitemsperblock = (poly.length / nblocks) | 0;
+		var nitemsperblock = (poly[length] / nblocks) | 0;
 		for (var i = 0; i < nitemsperblock; ++i) {
 			for (var j = 0; j < nblocks; ++j) {
 				result.push(poly[subsizes[j] + i]);
@@ -252,7 +253,7 @@
 		for (var j = pivot; j < nblocks; ++j) {
 			result.push(poly[subsizes[j + 1] - 1]);
 		}
-		for (var i = 0; i < genpoly.length; ++i) {
+		for (var i = 0; i < genpoly[length]; ++i) {
 			for (var j = 0; j < nblocks; ++j) {
 				result.push(eccs[j][i]);
 			}
@@ -293,7 +294,7 @@
 			reserved[6][i] = reserved[i][6] = 1;
 		}
 		var aligns = v[2],
-		m = aligns.length;
+		m = aligns[length];
 		for (var i = 0; i < m; ++i) {
 			var minj = (i === 0 || i === m - 1 ? 1 : 0),
 			maxj = (i === 0 ? m - 1 : m);
@@ -317,7 +318,7 @@
 		};
 	};
 	var putdata = function (matrix, reserved, buf) {
-		var n = matrix.length;
+		var n = matrix[length];
 		var k = 0,
 		dir = -1;
 		for (var i = n - 1; i >= 0; i -= 2) {
@@ -340,7 +341,7 @@
 	};
 	var maskdata = function (matrix, reserved, mask) {
 		var maskf = MASKFUNCS[mask];
-		var n = matrix.length;
+		var n = matrix[length];
 		for (var i = 0; i < n; ++i) {
 			for (var j = 0; j < n; ++j) {
 				if (!reserved[i][j]) {
@@ -351,7 +352,7 @@
 		return matrix;
 	};
 	var putformatinfo = function (matrix, reserved, ecclevel, mask) {
-		var n = matrix.length;
+		var n = matrix[length];
 		var code = augumentbch((ecclevel << 3) | mask, 5, 0x537, 10) ^ 0x5412;
 		for (var i = 0; i < 15; ++i) {
 			var r = [0, 1, 2, 3, 4, 5, 7, 8, n - 7, n - 6, n - 5, n - 4, n - 3, n - 2, n - 1][i];
@@ -367,12 +368,12 @@
 		var PENALTY_DENSITY = 10;
 		var evaluategroup = function (groups) {
 			var score = 0;
-			for (var i = 0; i < groups.length; ++i) {
+			for (var i = 0; i < groups[length]; ++i) {
 				if (groups[i] >= 5) {
 					score += PENALTY_CONSECUTIVE + (groups[i] - 5);
 				}
 			}
-			for (var i = 5; i < groups.length; i += 2) {
+			for (var i = 5; i < groups[length]; i += 2) {
 				var p = groups[i];
 				if (groups[i - 1] === p && groups[i - 2] === 3 * p && groups[i - 3] === p && groups[i - 4] === p && (groups[i - 5] >= 4 * p || groups[i + 1] >= 4 * p)) {
 					score += PENALTY_FINDERLIKE;
@@ -380,7 +381,7 @@
 			}
 			return score;
 		};
-		var n = matrix.length;
+		var n = matrix[length];
 		var score = 0,
 		nblacks = 0;
 		for (var i = 0; i < n; ++i) {
@@ -455,6 +456,15 @@
 		putformatinfo(matrix, reserved, ecclevel, mask);
 		return matrix;
 	};
+	var appendChild = "appendChild";
+	var createElement = "createElement";
+	var createElementNS = "createElementNS";
+	var setAttributeNS = "setAttributeNS";
+	var createRange = "createRange";
+	var selectNodeContents = "selectNodeContents";
+	var createContextualFragment = "createContextualFragment";
+	var createDocumentFragment = "createDocumentFragment";
+	var createTextNode = "createTextNode";
 	var QRCode = {
 		"generate": function (data, options) {
 			var MODES = {
@@ -497,7 +507,7 @@
 			}
 			if (ver < 0) {
 				for (ver = 1; ver <= 40; ++ver) {
-					if (data.length <= getmaxdatalen(ver, mode, ecclevel)) {
+					if (data[length] <= getmaxdatalen(ver, mode, ecclevel)) {
 						break;
 					}
 				}
@@ -519,8 +529,8 @@
 			var matrix = QRCode["generate"](data, options);
 			var modsize = Math.max(options.modulesize || 5, 0.5);
 			var margin = Math.max(options.margin !== null ? options.margin : 4, 0.0);
-			var e = document.createElement("div");
-			var n = matrix.length;
+			var e = document[createElement]("div");
+			var n = matrix[length];
 			var html = ['<table border="0" cellspacing="0" cellpadding="0" style="border:' +
 				modsize * margin + 'px solid ' + fillcolor + ';background:' + fillcolor + '">'];
 			for (var i = 0; i < n; ++i) {
@@ -533,10 +543,10 @@
 			}
 			e.className = "qrcode";
 			/* e.innerHTML = html.join("") + "</table>"; */
-			var range = document.createRange();
-			range.selectNodeContents(e);
-			var frag = range.createContextualFragment(html.join("") + "</table>");
-			e.appendChild(frag);
+			var range = document[createRange]();
+			range[selectNodeContents](e);
+			var frag = range[createContextualFragment](html.join("") + "</table>");
+			e[appendChild](frag);
 			return e;
 		},
 		"generateSVG": function (data, options) {
@@ -544,47 +554,47 @@
 			var fillcolor = options.fillcolor ? options.fillcolor : "#FFFFFF";
 			var textcolor = options.textcolor ? options.textcolor : "#000000";
 			var matrix = QRCode["generate"](data, options);
-			var n = matrix.length;
+			var n = matrix[length];
 			var modsize = Math.max(options.modulesize || 5, 0.5);
 			var margin = Math.max(options.margin ? options.margin : 4, 0.0);
 			var size = modsize * (n + 2 * margin);
 			/* var common = ' class= "fg"' + ' width="' + modsize + '" height="' + modsize + '"/>'; */
-			var e = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-			e.setAttribute("viewBox", "0 0 " + size + " " + size);
-			e.setAttribute("style", "shape-rendering:crispEdges");
+			var e = document[createElementNS]("http://www.w3.org/2000/svg", "svg");
+			e[setAttributeNS](null, "viewBox", "0 0 " + size + " " + size);
+			e[setAttributeNS](null, "style", "shape-rendering:crispEdges");
 			var qrcodeId = "qrcode" + Date.now();
-			e.setAttribute("id", qrcodeId);
-			var frag = document.createDocumentFragment();
+			e[setAttributeNS](null, "id", qrcodeId);
+			var frag = document[createDocumentFragment]();
 			/* var svg = ['<style scoped>.bg{fill:' + fillcolor + '}.fg{fill:' + textcolor + '}</style>', '<rect class="bg" x="0" y="0"', 'width="' + size + '" height="' + size + '"/>', ]; */
-			var style = document.createElementNS("http://www.w3.org/2000/svg", "style");
-			style.appendChild(document.createTextNode("#" + qrcodeId + " .bg{fill:" + fillcolor + "}#" + qrcodeId + " .fg{fill:" + textcolor + "}"));
-			/* style.setAttribute("scoped", "scoped"); */
-			frag.appendChild(style);
+			var style = document[createElementNS]("http://www.w3.org/2000/svg", "style");
+			style[appendChild](document[createTextNode]("#" + qrcodeId + " .bg{fill:" + fillcolor + "}#" + qrcodeId + " .fg{fill:" + textcolor + "}"));
+			/* style[setAttributeNS](null, "scoped", "scoped"); */
+			frag[appendChild](style);
 			var createRect = function (c, f, x, y, s) {
-				var fg = document.createElementNS("http://www.w3.org/2000/svg", "rect") || "";
-				fg.setAttributeNS(null, "class", c);
-				fg.setAttributeNS(null, "fill", f);
-				fg.setAttributeNS(null, "x", x);
-				fg.setAttributeNS(null, "y", y);
-				fg.setAttributeNS(null, "width", s);
-				fg.setAttributeNS(null, "height", s);
+				var fg = document[createElementNS]("http://www.w3.org/2000/svg", "rect") || "";
+				fg[setAttributeNS](null, "class", c);
+				fg[setAttributeNS](null, "fill", f);
+				fg[setAttributeNS](null, "x", x);
+				fg[setAttributeNS](null, "y", y);
+				fg[setAttributeNS](null, "width", s);
+				fg[setAttributeNS](null, "height", s);
 				return fg;
 			};
-			frag.appendChild(createRect("bg", "none", 0, 0, size));
+			frag[appendChild](createRect("bg", "none", 0, 0, size));
 			var yo = margin * modsize;
 			for (var y = 0; y < n; ++y) {
 				var xo = margin * modsize;
 				for (var x = 0; x < n; ++x) {
 					if (matrix[y][x]) {
 						/* svg.push('<rect x="' + xo + '" y="' + yo + '"', common); */
-						frag.appendChild(createRect("fg", "none", xo, yo, modsize));
+						frag[appendChild](createRect("fg", "none", xo, yo, modsize));
 					}
 					xo += modsize;
 				}
 				yo += modsize;
 			}
 			/* e.innerHTML = svg.join(""); */
-			e.appendChild(frag);
+			e[appendChild](frag);
 			return e;
 		},
 		"generatePNG": function (data, options) {
@@ -594,9 +604,9 @@
 			var matrix = QRCode["generate"](data, options);
 			var modsize = Math.max(options.modulesize || 5, 0.5);
 			var margin = Math.max((options.margin !== null && options.margin !== undefined) ? options.margin : 4, 0.0);
-			var n = matrix.length;
+			var n = matrix[length];
 			var size = modsize * (n + 2 * margin);
-			var canvas = document.createElement("canvas"),
+			var canvas = document[createElement]("canvas"),
 			context;
 			canvas.width = canvas.height = size;
 			context = canvas.getContext("2d");
