@@ -12,9 +12,6 @@
  * passes jshint with suppressing comments
  */
 /*jshint bitwise: false */
-/*jshint shadow: true */
-/*jshint sub:true */
-/*jshint -W041 */
 (function (root) {
 	"use strict";
 	var length = "length";
@@ -33,18 +30,18 @@
 	ECCLEVEL_H = 2;
 	var GF256_MAP = [],
 	GF256_INVMAP = [-1];
-	for (var i = 0, v = 1; i < 255; ++i) {
+	for (var i1 = 0, v = 1; i1 < 255; ++i1) {
 		GF256_MAP.push(v);
-		GF256_INVMAP[v] = i;
+		GF256_INVMAP[v] = i1;
 		v = (v * 2) ^ (v >= 128 ? 0x11d : 0);
 	}
 	var GF256_GENPOLY = [[]];
-	for (var i = 0; i < 30; ++i) {
-		var prevpoly = GF256_GENPOLY[i],
+	for (var i2 = 0; i2 < 30; ++i2) {
+		var prevpoly = GF256_GENPOLY[i2],
 		poly = [];
-		for (var j = 0; j <= i; ++j) {
-			var a = (j < i ? GF256_MAP[prevpoly[j]] : 0);
-			var b = GF256_MAP[(i + (prevpoly[j - 1] || 0)) % 255];
+		for (var j1 = 0; j1 <= i2; ++j1) {
+			var a = (j1 < i2 ? GF256_MAP[prevpoly[j1]] : 0);
+			var b = GF256_MAP[(i2 + (prevpoly[j1 - 1] || 0)) % 255];
 			poly.push(GF256_INVMAP[a ^ b]);
 		}
 		GF256_GENPOLY.push(poly);
@@ -181,17 +178,17 @@
 			pack(parseInt(data.substring(i - 2), 10), [0, 4, 7][datalen % 3]);
 			break;
 		case MODE_ALPHANUMERIC:
-			for (var i = 1; i < datalen; i += 2) {
-				pack(ALPHANUMERIC_MAP[data.charAt(i - 1)] * 45 +
-					ALPHANUMERIC_MAP[data.charAt(i)], 11);
+			for (var i2 = 1; i2 < datalen; i2 += 2) {
+				pack(ALPHANUMERIC_MAP[data.charAt(i2 - 1)] * 45 +
+					ALPHANUMERIC_MAP[data.charAt(i2)], 11);
 			}
 			if (datalen % 2 === 1) {
-				pack(ALPHANUMERIC_MAP[data.charAt(i - 1)], 6);
+				pack(ALPHANUMERIC_MAP[data.charAt(i2 - 1)], 6);
 			}
 			break;
 		case MODE_OCTET:
-			for (var i = 0; i < datalen; ++i) {
-				pack(data[i], 8);
+			for (var i3 = 0; i3 < datalen; ++i3) {
+				pack(data[i3], 8);
 			}
 			break;
 		}
@@ -233,28 +230,28 @@
 			subsizes.push(subsize0);
 			subsize0 += subsize;
 		}
-		for (var i = pivot; i < nblocks; ++i) {
+		for (var i2 = pivot; i2 < nblocks; ++i2) {
 			subsizes.push(subsize0);
 			subsize0 += subsize + 1;
 		}
 		subsizes.push(subsize0);
 		var eccs = [];
-		for (var i = 0; i < nblocks; ++i) {
-			eccs.push(calculateecc(poly.slice(subsizes[i], subsizes[i + 1]), genpoly));
+		for (var i3 = 0; i3 < nblocks; ++i3) {
+			eccs.push(calculateecc(poly.slice(subsizes[i3], subsizes[i3 + 1]), genpoly));
 		}
 		var result = [];
 		var nitemsperblock = (poly[length] / nblocks) | 0;
-		for (var i = 0; i < nitemsperblock; ++i) {
+		for (var i4 = 0; i4 < nitemsperblock; ++i4) {
 			for (var j = 0; j < nblocks; ++j) {
-				result.push(poly[subsizes[j] + i]);
+				result.push(poly[subsizes[j] + i4]);
 			}
 		}
-		for (var j = pivot; j < nblocks; ++j) {
-			result.push(poly[subsizes[j + 1] - 1]);
+		for (var j2 = pivot; j2 < nblocks; ++j2) {
+			result.push(poly[subsizes[j2 + 1] - 1]);
 		}
-		for (var i = 0; i < genpoly[length]; ++i) {
-			for (var j = 0; j < nblocks; ++j) {
-				result.push(eccs[j][i]);
+		for (var i5 = 0; i5 < genpoly[length]; ++i5) {
+			for (var j3 = 0; j3 < nblocks; ++j3) {
+				result.push(eccs[j3][i5]);
 			}
 		}
 		return result;
@@ -288,26 +285,26 @@
 		blit(0, 0, 9, 9, [0x7f, 0x41, 0x5d, 0x5d, 0x5d, 0x41, 0x17f, 0x00, 0x40]);
 		blit(n - 8, 0, 8, 9, [0x100, 0x7f, 0x41, 0x5d, 0x5d, 0x5d, 0x41, 0x7f]);
 		blit(0, n - 8, 9, 8, [0xfe, 0x82, 0xba, 0xba, 0xba, 0x82, 0xfe, 0x00, 0x00]);
-		for (var i = 9; i < n - 8; ++i) {
-			matrix[6][i] = matrix[i][6] = ~i & 1;
-			reserved[6][i] = reserved[i][6] = 1;
+		for (var i2 = 9; i2 < n - 8; ++i2) {
+			matrix[6][i2] = matrix[i2][6] = ~i2 & 1;
+			reserved[6][i2] = reserved[i2][6] = 1;
 		}
 		var aligns = v[2],
 		m = aligns[length];
-		for (var i = 0; i < m; ++i) {
-			var minj = (i === 0 || i === m - 1 ? 1 : 0),
-			maxj = (i === 0 ? m - 1 : m);
+		for (var i3 = 0; i3 < m; ++i3) {
+			var minj = (i3 === 0 || i3 === m - 1 ? 1 : 0),
+			maxj = (i3 === 0 ? m - 1 : m);
 			for (var j = minj; j < maxj; ++j) {
-				blit(aligns[i], aligns[j], 5, 5, [0x1f, 0x11, 0x15, 0x11, 0x1f]);
+				blit(aligns[i3], aligns[j], 5, 5, [0x1f, 0x11, 0x15, 0x11, 0x1f]);
 			}
 		}
 		if (needsverinfo(ver)) {
 			var code = augumentbch(ver, 6, 0x1f25, 12);
 			var k = 0;
-			for (var i = 0; i < 6; ++i) {
-				for (var j = 0; j < 3; ++j) {
-					matrix[i][(n - 11) + j] = matrix[(n - 11) + j][i] = (code >> k++) & 1;
-					reserved[i][(n - 11) + j] = reserved[(n - 11) + j][i] = 1;
+			for (var i4 = 0; i4 < 6; ++i4) {
+				for (var j2 = 0; j2 < 3; ++j2) {
+					matrix[i4][(n - 11) + j2] = matrix[(n - 11) + j2][i4] = (code >> k++) & 1;
+					reserved[i4][(n - 11) + j2] = reserved[(n - 11) + j2][i4] = 1;
 				}
 			}
 		}
@@ -372,9 +369,15 @@
 					score += PENALTY_CONSECUTIVE + (groups[i] - 5);
 				}
 			}
-			for (var i = 5; i < groups[length]; i += 2) {
-				var p = groups[i];
-				if (groups[i - 1] === p && groups[i - 2] === 3 * p && groups[i - 3] === p && groups[i - 4] === p && (groups[i - 5] >= 4 * p || groups[i + 1] >= 4 * p)) {
+			for (var i2 = 5; i2 < groups[length]; i2 += 2) {
+				var p = groups[i2];
+				if (
+					groups[i2 - 1] === p &&
+					groups[i2 - 2] === 3 * p &&
+					groups[i2 - 3] === p &&
+					groups[i2 - 4] === p &&
+					(groups[i2 - 5] >= 4 * p || groups[i2 + 1] >= 4 * p)
+				) {
 					score += PENALTY_FINDERLIKE;
 				}
 			}
@@ -400,24 +403,24 @@
 			}
 			score += evaluategroup(groups);
 			groups = [0];
-			for (var j = 0; j < n; ) {
-				var k;
-				for (k = 0; j < n && matrix[j][i]; ++k) {
-					++j;
+			for (var j2 = 0; j2 < n; ) {
+				var k2;
+				for (k2 = 0; j2 < n && matrix[j2][i]; ++k2) {
+					++j2;
 				}
-				groups.push(k);
-				for (k = 0; j < n && !matrix[j][i]; ++k) {
-					++j;
+				groups.push(k2);
+				for (k2 = 0; j2 < n && !matrix[j2][i]; ++k2) {
+					++j2;
 				}
-				groups.push(k);
+				groups.push(k2);
 			}
 			score += evaluategroup(groups);
 			var nextrow = matrix[i + 1] || [];
 			nblacks += row[0];
-			for (var j = 1; j < n; ++j) {
-				var p = row[j];
+			for (var j3 = 1; j3 < n; ++j3) {
+				var p = row[j3];
 				nblacks += p;
-				if (row[j - 1] === p && nextrow[j] === p && nextrow[j - 1] === p) {
+				if (row[j3 - 1] === p && nextrow[j3] === p && nextrow[j3 - 1] === p) {
 					score += PENALTY_TWOBYTWO;
 				}
 			}
@@ -525,7 +528,7 @@
 			var options = settings || {};
 			var fillcolor = options.fillcolor ? options.fillcolor : "#FFFFFF";
 			var textcolor = options.textcolor ? options.textcolor : "#000000";
-			var matrix = QRCode["generate"](data, options);
+			var matrix = QRCode.generate(data, options);
 			var modsize = Math.max(options.modulesize || 5, 0.5);
 			var margin = Math.max(options.margin !== null ? options.margin : 4, 0.0);
 			var e = document[createElement]("div");
@@ -552,7 +555,7 @@
 			var options = settings || {};
 			var fillcolor = options.fillcolor ? options.fillcolor : "#FFFFFF";
 			var textcolor = options.textcolor ? options.textcolor : "#000000";
-			var matrix = QRCode["generate"](data, options);
+			var matrix = QRCode.generate(data, options);
 			var n = matrix[length];
 			var modsize = Math.max(options.modulesize || 5, 0.5);
 			var margin = Math.max(options.margin ? options.margin : 4, 0.0);
@@ -598,9 +601,9 @@
 		},
 		"generatePNG": function (data, settings) {
 			var options = settings || {};
-			var fillcolor = options.fillcolor ? options.fillcolor : "#FFFFFF";
-			var textcolor = options.textcolor ? options.textcolor : "#000000";
-			var matrix = QRCode["generate"](data, options);
+			var fillcolor = options.fillcolor || "#FFFFFF";
+			var textcolor = options.textcolor || "#000000";
+			var matrix = QRCode.generate(data, options);
 			var modsize = Math.max(options.modulesize || 5, 0.5);
 			var margin = Math.max((options.margin !== null && options.margin !== undefined) ? options.margin : 4, 0.0);
 			var n = matrix[length];
@@ -629,6 +632,3 @@
 }
 	("undefined" !== typeof window ? window : this));
 /*jshint bitwise: true */
-/*jshint shadow: false */
-/*jshint sub: false */
-/*jshint +W041 */
