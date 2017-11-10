@@ -21,11 +21,10 @@ Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 [jsbin](https://jsbin.com/hobetuh/)
 
 ## Fixes / Added Features
-
- - `generateSVG` now works in Edge 13 and IE 11
- - `generateSVG` supports different colors for same page SVGs
- - `textcolor` and `fillcolor` options introduced
- - `innerHTML` replaced with `document.createDocumentFragment()`
+* `generateSVG` now works in Edge 13 and IE 11
+* `generateSVG` supports different colors for same page SVGs
+* `textcolor` and `fillcolor` options introduced
+* `innerHTML` replaced with `document.createDocumentFragment()`
 
 ## CDN
 
