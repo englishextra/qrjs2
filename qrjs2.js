@@ -629,6 +629,5 @@
 		}
 	};
 	root.QRCode = QRCode;
-}
-	("undefined" !== typeof window ? window : this));
+})("undefined" !== typeof window ? window : this);
 /*jshint bitwise: true */
