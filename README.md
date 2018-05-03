@@ -14,9 +14,9 @@ Based on [lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
 [codepen](https://codepen.io/englishextra/full/NpwjKW)
 
-[jsfiddle](https://jsfiddle.net/englishextra/Lp37dL94/show/)
+[jsfiddle](https://fiddle.jshell.net/englishextra/Lp37dL94/show/)
 
-[jsbin](https://jsbin.com/hobetuh/)
+[jsbin](https://output.jsbin.com/hobetuh/)
 
 ## Fixes / Added Features
 * `generateSVG` now works in Edge 13 and IE 11
