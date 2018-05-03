@@ -1,16 +1,14 @@
 # qrjs2
 QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element).
 
-Based on [github.com/lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
+Based on [lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/031cf1474c704567afbb07b79ea63d82)](https://www.codacy.com/app/englishextra/qrjs2?utm_source=github.com&utm_medium=referral&utm_content=englishextra/qrjs2&utm_campaign=badger)
 [![NPM](https://nodei.co/npm/qrjs2.png?downloads=true)](https://nodei.co/npm/qrjs2/)
 
 [![npm](https://img.shields.io/npm/v/qrjs2.svg)](https://github.com/englishextra/qrjs2)
 [![Bower](https://img.shields.io/bower/v/qrjs2.svg)](https://github.com/englishextra/qrjs2)
 [![Build Status](https://travis-ci.org/englishextra/qrjs2.svg?branch=master)](https://travis-ci.org/englishextra/qrjs2)
-[![bitHound Overall Score](https://www.bithound.io/github/englishextra/qrjs2/badges/score.svg)](https://www.bithound.io/github/englishextra/qrjs2)
-[![CDNJS](https://img.shields.io/cdnjs/v/qrjs2.svg)](https://cdnjs.com/libraries/qrjs2)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/031cf1474c704567afbb07b79ea63d82)](https://www.codacy.com/app/englishextra/qrjs2?utm_source=github.com&utm_medium=referral&utm_content=englishextra/qrjs2&utm_campaign=badger)
 
 ## Demo
 
