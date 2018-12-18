@@ -1,0 +1,4 @@
+gulp browser-sync
+
+pause
+

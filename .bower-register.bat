@@ -1,1 +1,1 @@
-bower register qrjs2 git://github.com/englishextra/qrjs2.git
+bower register img-lightbox git://github.com/englishextra/img-lightbox.git

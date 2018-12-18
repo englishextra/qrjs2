@@ -15,9 +15,9 @@
 	"app",
 	"front-end",
 	"html"],
-	"files": ["qrjs2.js"],
-	"main": "qrjs2.js",
-	"filename": "qrjs2.js",
+	"files": ["js/qrjs2.js"],
+	"main": "js/qrjs2.js",
+	"filename": "js/qrjs2.js",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/englishextra/qrjs2.git"
@@ -31,8 +31,23 @@
 		}]
 	},
 	"devDependencies": {
+		"@babel/core": "^7.2.2",
+		"@babel/plugin-transform-arrow-functions": "^7.2.0",
+		"@babel/plugin-transform-async-to-generator": "^7.2.0",
+		"@babel/plugin-transform-object-assign": "^7.2.0",
+		"@babel/preset-env": "^7.2.0",
+		"browser-sync": "^2.26.3",
 		"grunt": "^1.0.1",
 		"grunt-contrib-jshint": "^1.1.0",
+		"gulp": "^3.9.1",
+		"gulp-babel": "^8.0.0",
+		"gulp-cli": "^2.0.1",
+		"gulp-plumber": "^1.2.1",
+		"gulp-prettier": "^2.0.0",
+		"gulp-rename": "^1.4.0",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-strip-debug": "^3.0.0",
+		"gulp-uglify": "^3.0.1",
 		"jshint": "^2.9.4"
 	},
 	"scripts": {

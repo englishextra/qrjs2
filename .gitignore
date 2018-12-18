@@ -1,3 +1,10 @@
-*.bat
-*.sh
-koala-config.json
+*.ai
+*.fw.png
+*.map
+*.psd
+*.URL
+*.zip
+.src
+bower_components/
+maps/
+node_modules/
