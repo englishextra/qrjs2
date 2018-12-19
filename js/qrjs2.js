@@ -1,4 +1,5 @@
 /*!
+ * @see {@link https://github.com/englishextra/qrjs2}
  * modified qr.js -- QR code generator in Javascript (revision 2011-01-19)
  * Written by Kang Seonghoon <public+qrjs@mearie.org>.
  * v0.0.20110119
@@ -9,8 +10,13 @@
  * svg now works in Edge 13 and IE 11
  * @see {@link https://gist.github.com/englishextra/b46969e3382ef737c611bb59d837220b}
  * @see {@link https://github.com/lifthrasiir/qr.js/blob/v0.0.20110119/qr.js}
+ * @params {String} data
+ * @params {Object} settings object
+ * element = QRCode.generateSVG(data, settings)
  * passes jshint with suppressing comments
  */
+
+/*jshint -W014 */
 
 /*jshint bitwise: false */
 (function(root, document) {
