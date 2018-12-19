@@ -11,6 +11,7 @@
  * @see {@link https://github.com/lifthrasiir/qr.js/blob/v0.0.20110119/qr.js}
  * passes jshint with suppressing comments
  */
+/*jshint -W014 */
 /*jshint bitwise: false */
 (function (root, document) {
 	"use strict";
