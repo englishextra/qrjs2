@@ -28,11 +28,11 @@ Based on [lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
 #### jsDelivr
 
-`https://cdn.jsdelivr.net/gh/englishextra/qrjs2@0.1.6/qrjs2.min.js`
+`https://cdn.jsdelivr.net/gh/englishextra/qrjs2@latest/qrjs2.min.js`
 
 #### unpkg
 
-`https://unpkg.com/qrjs2@0.1.6/qrjs2.js`
+`https://unpkg.com/qrjs2@latest/qrjs2.js`
 
 ## Usage and Output
 
