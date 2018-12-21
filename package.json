@@ -39,7 +39,7 @@
 		"browser-sync": "^2.26.3",
 		"grunt": "^1.0.1",
 		"grunt-contrib-jshint": "^1.1.0",
-		"gulp": "^3.9.1",
+		"gulp": "^4.0.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-cli": "^2.0.1",
 		"gulp-plumber": "^1.2.1",
