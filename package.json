@@ -55,7 +55,7 @@
 		"jshint": "^2.9.4"
 	},
 	"scripts": {
-		"test": "grunt --verbose"
+		"test": "gulp lint-js"
 	},
 	"email": "englishextra@mail.ru",
 	"url": "https://github.com/englishextra/qrjs/issues",
