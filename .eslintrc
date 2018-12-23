@@ -1,24 +1,6 @@
 {
   // http://eslint.org/docs/rules/
 
-  "ecmaFeatures": {
-    "binaryLiterals": false,                    // enable binary literals
-    "blockBindings": false,                     // enable let and const (aka block bindings)
-    "defaultParams": false,                     // enable default function parameters
-    "forOf": false,                             // enable for-of loops
-    "generators": false,                        // enable generators
-    "objectLiteralComputedProperties": false,   // enable computed object literal property names
-    "objectLiteralDuplicateProperties": false,  // enable duplicate object literal properties in strict mode
-    "objectLiteralShorthandMethods": false,     // enable object literal shorthand methods
-    "objectLiteralShorthandProperties": false,  // enable object literal shorthand properties
-    "octalLiterals": false,                     // enable octal literals
-    "regexUFlag": false,                        // enable the regular expression u flag
-    "regexYFlag": false,                        // enable the regular expression y flag
-    "templateStrings": false,                   // enable template strings
-    "unicodeCodePointEscapes": false,           // enable code point escapes
-    "jsx": false                                // enable JSX
-  },
-
   "env": {
     "browser": false,     // browser global variables.
     "node": false,        // Node.js global variables and Node.js-specific rules.
@@ -68,7 +50,6 @@
     "use-isnan": 0,               // disallow comparisons with the value NaN
     "valid-jsdoc": 0,             // Ensure JSDoc comments are valid (off by default)
     "valid-typeof": 0,            // Ensure that the results of typeof are compared against a valid string
-
 
     ////////// Best Practices //////////
 
@@ -120,13 +101,11 @@
     "wrap-iife": 0,             // require immediate function invocation to be wrapped in parentheses (off by default)
     "yoda": 0,                  // require or disallow Yoda conditions
 
-
     ////////// Strict Mode //////////
 
     "global-strict": 0,   // (deprecated) require or disallow the "use strict" pragma in the global scope (off by default in the node environment)
     "no-extra-strict": 0, // (deprecated) disallow unnecessary use of "use strict"; when already in strict mode
     "strict": 0,          // controls location of Use Strict Directives
-
 
     ////////// Variables //////////
 
@@ -141,7 +120,6 @@
     "no-unused-vars": 0,              // disallow declaration of variables that are not used in the code
     "no-use-before-define": 0,        // disallow use of variables before they are defined
 
-
     ////////// Node.js //////////
 
     "handle-callback-err": 0,   // enforces error handling in callbacks (off by default) (on by default in the node environment)
@@ -151,7 +129,6 @@
     "no-process-exit": 0,       // disallow process.exit() (on by default in the node environment)
     "no-restricted-modules": 0, // restrict usage of specified node modules (off by default)
     "no-sync": 0,               // disallow use of synchronous methods (off by default)
-
 
     ////////// Stylistic Issues //////////
 
@@ -198,12 +175,10 @@
     "spaced-line-comment": 0,       // require or disallow a space immediately following the // in a line comment (off by default)
     "wrap-regex": 0,                // require regex literals to be wrapped in parentheses (off by default)
 
-
     ////////// ECMAScript 6 //////////
 
     "no-var": 0,          // require let or const instead of var (off by default)
     "generator-star": 0,  // enforce the position of the * in generator functions (off by default)
-
 
     ////////// Legacy //////////
 
