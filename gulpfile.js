@@ -102,25 +102,35 @@ prettierOptions = {
 
 var stripDebug = require("gulp-strip-debug");
 
+var eslint = require("gulp-eslint");
+
 var options = {
 	libPaths: {
 		src: "./src/*.js",
-		js: "./js"
+		js: "./js",
+		scss: "./scss/*.scss",
+		css: "./css"
 	},
 };
 
-/*!
- * @see {@link https://browsersync.io/docs/gulp}
- */
-gulp.task("browser-sync", function () {
-
-	browserSync.init({
-		server: "./"
-	});
-
-	gulp.watch("./*.html").on("change", reload);
-	gulp.watch("./js/*.js").on("change", reload);
-	gulp.watch("./src/*.js", gulp.parallel("compile-js")).on("change", reload);
+gulp.task("compile-css", function () {
+	return gulp.src(options.libPaths.scss)
+	.pipe(plumber())
+	.pipe(sourcemaps.init())
+	.pipe(sass({
+			errLogToConsole: true
+		}))
+	.pipe(autoprefixer(autoprefixerOptions))
+	.pipe(prettier(prettierOptions))
+	/* .pipe(beautify(beautifyOptions)) */
+	.pipe(plumber.stop())
+	.pipe(gulp.dest(options.libPaths.css))
+	.pipe(rename(function (path) {
+			path.basename += ".min";
+		}))
+	.pipe(minifyCss(cleanCssOptions))
+	.pipe(sourcemaps.write("."))
+	.pipe(gulp.dest(options.libPaths.css));
 });
 
 gulp.task("compile-js", function () {
@@ -138,7 +148,31 @@ gulp.task("compile-js", function () {
 	.pipe(stripDebug())
 	.pipe(uglify())
 	.pipe(sourcemaps.write("."))
-	.pipe(gulp.dest(options.libPaths.js))
+	.pipe(gulp.dest(options.libPaths.js));
 });
+
+gulp.task("lint-js", function () {
+	return gulp.src(options.libPaths.src)
+	.pipe(eslint())
+	.pipe(eslint.format())
+	.pipe(eslint.failAfterError());
+});
+
+/*!
+ * @see {@link https://browsersync.io/docs/gulp}
+ */
+gulp.task("browser-sync", gulp.series(gulp.parallel(
+			"lint-js"), function () {
+
+		browserSync.init({
+			server: "./"
+		});
+
+		gulp.watch("./*.html").on("change", reload);
+		gulp.watch("./css/*.css").on("change", reload);
+		gulp.watch("./scss/*.scss", gulp.parallel("compile-css")).on("change", reload);
+		gulp.watch("./js/*.js").on("change", reload);
+		gulp.watch("./src/*.js", gulp.parallel("compile-js")).on("change", reload);
+	}));
 
 gulp.task("default", gulp.task("browser-sync"));
