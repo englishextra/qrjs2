@@ -162,7 +162,7 @@ gulp.task("lint-js", function () {
  * @see {@link https://browsersync.io/docs/gulp}
  */
 gulp.task("browser-sync", gulp.series(gulp.parallel(
-			"lint-js"), function () {
+			"lint-js"), function watchChanges() {
 
 		browserSync.init({
 			server: "./"
