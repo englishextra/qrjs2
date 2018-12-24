@@ -105,54 +105,32 @@ var stripDebug = require("gulp-strip-debug");
 var eslint = require("gulp-eslint");
 
 var options = {
-	libPaths: {
+	libbundle: {
 		src: "./src/*.js",
-		js: "./js",
-		scss: "./scss/*.scss",
-		css: "./css"
+		js: "./js"
 	},
 };
 
-gulp.task("compile-css", function () {
-	return gulp.src(options.libPaths.scss)
-	.pipe(plumber())
-	.pipe(sourcemaps.init())
-	.pipe(sass({
-			errLogToConsole: true
-		}))
-	.pipe(autoprefixer(autoprefixerOptions))
-	.pipe(prettier(prettierOptions))
-	/* .pipe(beautify(beautifyOptions)) */
-	.pipe(plumber.stop())
-	.pipe(gulp.dest(options.libPaths.css))
-	.pipe(rename(function (path) {
-			path.basename += ".min";
-		}))
-	.pipe(minifyCss(cleanCssOptions))
-	.pipe(sourcemaps.write("."))
-	.pipe(gulp.dest(options.libPaths.css));
-});
-
 gulp.task("compile-js", function () {
-	return gulp.src(options.libPaths.src)
+	return gulp.src(options.libbundle.src)
 	.pipe(plumber())
 	.pipe(sourcemaps.init())
 	.pipe(babel(babelOptions))
 	.pipe(prettier(prettierOptions))
 	/* .pipe(beautify(beautifyOptions)) */
 	.pipe(plumber.stop())
-	.pipe(gulp.dest(options.libPaths.js))
+	.pipe(gulp.dest(options.libbundle.js))
 	.pipe(rename(function (path) {
 			path.basename += ".min";
 		}))
 	.pipe(stripDebug())
 	.pipe(uglify())
 	.pipe(sourcemaps.write("."))
-	.pipe(gulp.dest(options.libPaths.js));
+	.pipe(gulp.dest(options.libbundle.js));
 });
 
 gulp.task("lint-js", function () {
-	return gulp.src(options.libPaths.src)
+	return gulp.src(options.libbundle.src)
 	.pipe(eslint())
 	.pipe(eslint.format())
 	.pipe(eslint.failAfterError());
@@ -169,8 +147,6 @@ gulp.task("browser-sync", gulp.series(gulp.parallel(
 		});
 
 		gulp.watch("./*.html").on("change", reload);
-		gulp.watch("./css/*.css").on("change", reload);
-		gulp.watch("./scss/*.scss", gulp.parallel("compile-css")).on("change", reload);
 		gulp.watch("./js/*.js").on("change", reload);
 		gulp.watch("./src/*.js", gulp.parallel("compile-js")).on("change", reload);
 	}));
