@@ -52,7 +52,7 @@
 		"gulp-uglify": "^3.0.1"
 	},
 	"scripts": {
-		"test": "gulp lint-js"
+		"test": "gulp lint-libbundle-js"
 	},
 	"email": "englishextra@mail.ru",
 	"url": "https://github.com/englishextra/qrjs/issues",

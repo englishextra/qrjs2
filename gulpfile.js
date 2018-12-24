@@ -129,7 +129,7 @@ gulp.task("compile-js", function () {
 	.pipe(gulp.dest(options.libbundle.js));
 });
 
-gulp.task("lint-js", function () {
+gulp.task("lint-libbundle-js", function () {
 	return gulp.src(options.libbundle.src)
 	.pipe(eslint())
 	.pipe(eslint.format())
@@ -140,7 +140,7 @@ gulp.task("lint-js", function () {
  * @see {@link https://browsersync.io/docs/gulp}
  */
 gulp.task("browser-sync", gulp.series(gulp.parallel(
-			"lint-js"), function watchChanges() {
+			"lint-libbundle-js"), function watchChanges() {
 
 		browserSync.init({
 			server: "./"
