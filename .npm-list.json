@@ -1,101 +1,101 @@
 {
-  "name": "qrjs2",
-  "version": "0.1.7",
-  "dependencies": {
-    "@babel/core": {
-      "version": "7.2.2",
-      "from": "@babel/core@>=7.2.2 <8.0.0",
-      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.2.2.tgz"
-    },
-    "@babel/plugin-transform-arrow-functions": {
-      "version": "7.2.0",
-      "from": "@babel/plugin-transform-arrow-functions@>=7.2.0 <8.0.0",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.2.0.tgz"
-    },
-    "@babel/plugin-transform-async-to-generator": {
-      "version": "7.2.0",
-      "from": "@babel/plugin-transform-async-to-generator@>=7.2.0 <8.0.0",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-async-to-generator/-/plugin-transform-async-to-generator-7.2.0.tgz"
-    },
-    "@babel/plugin-transform-object-assign": {
-      "version": "7.2.0",
-      "from": "@babel/plugin-transform-object-assign@>=7.2.0 <8.0.0",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-object-assign/-/plugin-transform-object-assign-7.2.0.tgz"
-    },
-    "@babel/preset-env": {
-      "version": "7.2.3",
-      "from": "@babel/preset-env@>=7.2.0 <8.0.0",
-      "resolved": "https://registry.npmjs.org/@babel/preset-env/-/preset-env-7.2.3.tgz"
-    },
-    "browser-sync": {
-      "version": "2.26.3",
-      "from": "browser-sync@>=2.26.3 <3.0.0",
-      "resolved": "https://registry.npmjs.org/browser-sync/-/browser-sync-2.26.3.tgz"
-    },
-    "grunt": {
-      "version": "1.0.3",
-      "from": "grunt@>=1.0.1 <2.0.0",
-      "resolved": "https://registry.npmjs.org/grunt/-/grunt-1.0.3.tgz"
-    },
-    "grunt-contrib-jshint": {
-      "version": "1.1.0",
-      "from": "grunt-contrib-jshint@>=1.1.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/grunt-contrib-jshint/-/grunt-contrib-jshint-1.1.0.tgz"
-    },
-    "gulp": {
-      "version": "4.0.0",
-      "from": "gulp@>=4.0.0 <5.0.0",
-      "resolved": "https://registry.npmjs.org/gulp/-/gulp-4.0.0.tgz"
-    },
-    "gulp-babel": {
-      "version": "8.0.0",
-      "from": "gulp-babel@>=8.0.0 <9.0.0",
-      "resolved": "https://registry.npmjs.org/gulp-babel/-/gulp-babel-8.0.0.tgz"
-    },
-    "gulp-cli": {
-      "version": "2.0.1",
-      "from": "gulp-cli@>=2.0.1 <3.0.0",
-      "resolved": "https://registry.npmjs.org/gulp-cli/-/gulp-cli-2.0.1.tgz"
-    },
-    "gulp-eslint": {
-      "version": "5.0.0",
-      "from": "gulp-eslint@>=5.0.0 <6.0.0",
-      "resolved": "https://registry.npmjs.org/gulp-eslint/-/gulp-eslint-5.0.0.tgz"
-    },
-    "gulp-plumber": {
-      "version": "1.2.1",
-      "from": "gulp-plumber@>=1.2.1 <2.0.0",
-      "resolved": "https://registry.npmjs.org/gulp-plumber/-/gulp-plumber-1.2.1.tgz"
-    },
-    "gulp-prettier": {
-      "version": "2.0.0",
-      "from": "gulp-prettier@>=2.0.0 <3.0.0",
-      "resolved": "https://registry.npmjs.org/gulp-prettier/-/gulp-prettier-2.0.0.tgz"
-    },
-    "gulp-rename": {
-      "version": "1.4.0",
-      "from": "gulp-rename@>=1.4.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/gulp-rename/-/gulp-rename-1.4.0.tgz"
-    },
-    "gulp-sourcemaps": {
-      "version": "2.6.4",
-      "from": "gulp-sourcemaps@>=2.6.4 <3.0.0",
-      "resolved": "https://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-2.6.4.tgz"
-    },
-    "gulp-strip-debug": {
-      "version": "3.0.0",
-      "from": "gulp-strip-debug@>=3.0.0 <4.0.0",
-      "resolved": "https://registry.npmjs.org/gulp-strip-debug/-/gulp-strip-debug-3.0.0.tgz"
-    },
-    "gulp-uglify": {
-      "version": "3.0.1",
-      "from": "gulp-uglify@>=3.0.1 <4.0.0",
-      "resolved": "https://registry.npmjs.org/gulp-uglify/-/gulp-uglify-3.0.1.tgz"
-    },
-    "jshint": {
-      "version": "2.9.7",
-      "from": "jshint@>=2.9.4 <3.0.0",
-      "resolved": "https://registry.npmjs.org/jshint/-/jshint-2.9.7.tgz"
-    }
-  }
+	"name": "qrjs2",
+	"version": "0.1.7",
+	"dependencies": {
+		"@babel/core": {
+			"version": "7.2.2",
+			"from": "@babel/core@>=7.2.2 <8.0.0",
+			"resolved": "https://registry.npmjs.org/@babel/core/-/core-7.2.2.tgz"
+		},
+		"@babel/plugin-transform-arrow-functions": {
+			"version": "7.2.0",
+			"from": "@babel/plugin-transform-arrow-functions@>=7.2.0 <8.0.0",
+			"resolved": "https://registry.npmjs.org/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.2.0.tgz"
+		},
+		"@babel/plugin-transform-async-to-generator": {
+			"version": "7.2.0",
+			"from": "@babel/plugin-transform-async-to-generator@>=7.2.0 <8.0.0",
+			"resolved": "https://registry.npmjs.org/@babel/plugin-transform-async-to-generator/-/plugin-transform-async-to-generator-7.2.0.tgz"
+		},
+		"@babel/plugin-transform-object-assign": {
+			"version": "7.2.0",
+			"from": "@babel/plugin-transform-object-assign@>=7.2.0 <8.0.0",
+			"resolved": "https://registry.npmjs.org/@babel/plugin-transform-object-assign/-/plugin-transform-object-assign-7.2.0.tgz"
+		},
+		"@babel/preset-env": {
+			"version": "7.2.3",
+			"from": "@babel/preset-env@>=7.2.0 <8.0.0",
+			"resolved": "https://registry.npmjs.org/@babel/preset-env/-/preset-env-7.2.3.tgz"
+		},
+		"browser-sync": {
+			"version": "2.26.3",
+			"from": "browser-sync@>=2.26.3 <3.0.0",
+			"resolved": "https://registry.npmjs.org/browser-sync/-/browser-sync-2.26.3.tgz"
+		},
+		"grunt": {
+			"version": "1.0.3",
+			"from": "grunt@>=1.0.1 <2.0.0",
+			"resolved": "https://registry.npmjs.org/grunt/-/grunt-1.0.3.tgz"
+		},
+		"grunt-contrib-jshint": {
+			"version": "1.1.0",
+			"from": "grunt-contrib-jshint@>=1.1.0 <2.0.0",
+			"resolved": "https://registry.npmjs.org/grunt-contrib-jshint/-/grunt-contrib-jshint-1.1.0.tgz"
+		},
+		"gulp": {
+			"version": "4.0.0",
+			"from": "gulp@>=4.0.0 <5.0.0",
+			"resolved": "https://registry.npmjs.org/gulp/-/gulp-4.0.0.tgz"
+		},
+		"gulp-babel": {
+			"version": "8.0.0",
+			"from": "gulp-babel@>=8.0.0 <9.0.0",
+			"resolved": "https://registry.npmjs.org/gulp-babel/-/gulp-babel-8.0.0.tgz"
+		},
+		"gulp-cli": {
+			"version": "2.0.1",
+			"from": "gulp-cli@>=2.0.1 <3.0.0",
+			"resolved": "https://registry.npmjs.org/gulp-cli/-/gulp-cli-2.0.1.tgz"
+		},
+		"gulp-eslint": {
+			"version": "5.0.0",
+			"from": "gulp-eslint@>=5.0.0 <6.0.0",
+			"resolved": "https://registry.npmjs.org/gulp-eslint/-/gulp-eslint-5.0.0.tgz"
+		},
+		"gulp-plumber": {
+			"version": "1.2.1",
+			"from": "gulp-plumber@>=1.2.1 <2.0.0",
+			"resolved": "https://registry.npmjs.org/gulp-plumber/-/gulp-plumber-1.2.1.tgz"
+		},
+		"gulp-prettier": {
+			"version": "2.0.0",
+			"from": "gulp-prettier@>=2.0.0 <3.0.0",
+			"resolved": "https://registry.npmjs.org/gulp-prettier/-/gulp-prettier-2.0.0.tgz"
+		},
+		"gulp-rename": {
+			"version": "1.4.0",
+			"from": "gulp-rename@>=1.4.0 <2.0.0",
+			"resolved": "https://registry.npmjs.org/gulp-rename/-/gulp-rename-1.4.0.tgz"
+		},
+		"gulp-sourcemaps": {
+			"version": "2.6.4",
+			"from": "gulp-sourcemaps@>=2.6.4 <3.0.0",
+			"resolved": "https://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-2.6.4.tgz"
+		},
+		"gulp-strip-debug": {
+			"version": "3.0.0",
+			"from": "gulp-strip-debug@>=3.0.0 <4.0.0",
+			"resolved": "https://registry.npmjs.org/gulp-strip-debug/-/gulp-strip-debug-3.0.0.tgz"
+		},
+		"gulp-uglify": {
+			"version": "3.0.1",
+			"from": "gulp-uglify@>=3.0.1 <4.0.0",
+			"resolved": "https://registry.npmjs.org/gulp-uglify/-/gulp-uglify-3.0.1.tgz"
+		},
+		"jshint": {
+			"version": "2.9.7",
+			"from": "jshint@>=2.9.4 <3.0.0",
+			"resolved": "https://registry.npmjs.org/jshint/-/jshint-2.9.7.tgz"
+		}
+	}
 }
