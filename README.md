@@ -66,7 +66,7 @@ Will add an SVG element to parent DIV:
 	<style scoped="scoped">.bg{fill:#FFFFFF}.fg{fill:#373737}</style>
 	<rect class="bg" fill="none" x="0" y="0" width="264" height="264"></rect>
  	<rect class="fg" fill="none" x="32" y="32" width="8" height="8"></rect>
-    ...
+		...
 </svg>
 ```
 
@@ -131,8 +131,8 @@ Will add an HTML table element to parent DIV:
 ```
 <table style="border:32px solid #FFFFFF;background:#FFFFFF" cellspacing="0" cellpadding="0" border="0">
 	<tbody>
-    	<tr>
-        	<td style="width:8px;height:8px;background:#373737"></td>
+			<tr>
+					<td style="width:8px;height:8px;background:#373737"></td>
 			...
 		</tr>
 	</tbody>
