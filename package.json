@@ -2,24 +2,20 @@
 	"name": "qrjs2",
 	"version": "0.1.7",
 	"description": "QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element).",
-	"keywords": [
-		"qr",
-		"qrcode",
-		"qr-code",
-		"qrcode-generator",
-		"svg",
-		"svg-images",
-		"js",
-		"javascript",
-		"vanilla-js",
-		"webapp",
-		"app",
-		"front-end",
-		"html"
-	],
-	"files": [
-		"js/qrjs2.js"
-	],
+	"keywords": ["qr",
+	"qrcode",
+	"qr-code",
+	"qrcode-generator",
+	"svg",
+	"svg-images",
+	"js",
+	"javascript",
+	"vanilla-js",
+	"webapp",
+	"app",
+	"front-end",
+	"html"],
+	"files": ["js/qrjs2.js"],
 	"main": "js/qrjs2.js",
 	"filename": "js/qrjs2.js",
 	"repository": {
@@ -29,14 +25,10 @@
 	"autoupdate": {
 		"source": "git",
 		"target": "git://github.com/englishextra/qrjs2.git",
-		"fileMap": [
-			{
-				"basePath": "",
-				"files": [
-					"js/qrjs*"
-				]
-			}
-		]
+		"fileMap": [{
+			"basePath": "",
+			"files": ["js/qrjs*"]
+		}]
 	},
 	"dependencies": {
 		"npm": "^6.5.0"
