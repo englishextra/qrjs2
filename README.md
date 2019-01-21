@@ -47,7 +47,7 @@ bower install qrjs2
 
 ### SVG Element (yeah, give it to me)
 
-```
+```js
 var svgElement = document.createElement("div"),
 u = "https://github.com",
 s = QRCode.generateSVG(u, {
@@ -61,7 +61,7 @@ svgElement.appendChild(s);
 document.body.appendChild(svgElement);
 ```
 Will add an SVG element to parent DIV:
-```
+```svg
 <svg viewBox="0 0 264 264" style="shape-rendering:crispEdges">
 	<style scoped="scoped">.bg{fill:#FFFFFF}.fg{fill:#373737}</style>
 	<rect class="bg" fill="none" x="0" y="0" width="264" height="264"></rect>
@@ -72,7 +72,7 @@ Will add an SVG element to parent DIV:
 
 ### Data URI SVG String with Data URI PNG String Fallback
 
-```
+```js
 if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
 	var dataUriSvgImage = document.createElement("img"),
 	u = "https://github.com",
@@ -104,17 +104,17 @@ if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
 }
 ```
 Will add a Data URI SVG string to IMG element's SRC attribute:
-```
+```html
 <img src="data:image/svg+xml;base64,...">
 ```
 Or a Data URI PNG string to IMG element's SRC attribute:
-```
+```html
 <img src="data:image/png;base64,...">
 ```
 
 ### HTML Table Element
 
-```
+```js
 var htmlTable = document.createElement("div"),
 u = "https://github.com",
 s = QRCode.generateHTML(u, {
@@ -128,7 +128,7 @@ htmlTable.appendChild(s);
 document.body.appendChild(htmlTable);
 ```
 Will add an HTML table element to parent DIV:
-```
+```html
 <table style="border:32px solid #FFFFFF;background:#FFFFFF" cellspacing="0" cellpadding="0" border="0">
 	<tbody>
 			<tr>
