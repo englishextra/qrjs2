@@ -118,7 +118,6 @@ gulp.task("compile-libbundle-js", function () {
 	.pipe(babel(babelOptions))
 	.pipe(prettier(prettierOptions))
 	/* .pipe(beautify(beautifyOptions)) */
-	.pipe(plumber.stop())
 	.pipe(gulp.dest(options.libbundle.js))
 	.pipe(rename(function (path) {
 			path.basename += ".min";
@@ -126,7 +125,8 @@ gulp.task("compile-libbundle-js", function () {
 	.pipe(stripDebug())
 	.pipe(uglify())
 	.pipe(sourcemaps.write("."))
-	.pipe(gulp.dest(options.libbundle.js));
+	.pipe(gulp.dest(options.libbundle.js))
+	.pipe(plumber.stop());
 });
 
 gulp.task("lint-libbundle-js", function () {
