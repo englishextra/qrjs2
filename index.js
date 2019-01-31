@@ -21,7 +21,7 @@ app.on("ready", function () {
 	/* https://electronjs.org/docs/tutorial/security */
 	mainWindow = new BrowserWindow({
 			webPreferences: {
-				contextIsolation: true,
+				contextIsolation: false,
 				nodeIntegration: true
 			},
 			width: 844,
