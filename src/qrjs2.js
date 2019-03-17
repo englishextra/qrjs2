@@ -632,3 +632,6 @@
 	root.QRCode = QRCode;
 })("undefined" !== typeof window ? window : this, document);
 /*jshint bitwise: true */
+/*jshint shadow: false */
+/*jshint sub: false */
+/*jshint +W041 */
