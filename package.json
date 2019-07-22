@@ -42,7 +42,7 @@
 		]
 	},
 	"dependencies": {
-		"npm": "^6.9.0"
+		"npm": "^6.10.1"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.2.2",
@@ -50,7 +50,7 @@
 		"@babel/plugin-transform-async-to-generator": "^7.2.0",
 		"@babel/plugin-transform-object-assign": "^7.2.0",
 		"@babel/preset-env": "^7.2.0",
-		"browser-sync": "^2.26.3",
+		"browser-sync": "^2.26.7",
 		"gulp": "^4.0.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-cli": "^2.0.1",
