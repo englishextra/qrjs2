@@ -3,19 +3,27 @@
 	"version": "0.1.7",
 	"description": "QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element).",
 	"keywords": [
-		"qr",
-		"qrcode",
-		"qr-code",
-		"qrcode-generator",
-		"svg",
-		"svg-images",
-		"js",
-		"javascript",
+		"lightbox",
+		"vanilla-javascript",
 		"vanilla-js",
-		"webapp",
-		"app",
+		"css",
+		"js",
+		"html",
 		"front-end",
-		"html"
+		"frontend",
+		"pwa",
+		"webapp",
+		"website",
+		"ui",
+		"browser",
+		"iframe",
+		"no-jquery",
+		"no-dependencies",
+		"no-framework",
+		"youtube",
+		"vimeo",
+		"soundcloud",
+		"audiomack"
 	],
 	"main": "main.js",
 	"window": {
@@ -23,26 +31,28 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/englishextra/qrjs2.git"
+		"url": "git://github.com/englishextra/iframe-lightbox.git"
 	},
 	"files": [
-		"js/qrjs2.js"
+		"js/iframe-lightbox.js",
+		"css/iframe-lightbox.css"
 	],
-	"filename": "js/qrjs2.js",
+	"filename": "js/iframe-lightbox.js",
 	"autoupdate": {
 		"source": "git",
-		"target": "git://github.com/englishextra/qrjs2.git",
+		"target": "git://github.com/englishextra/iframe-lightbox.git",
 		"fileMap": [
 			{
 				"basePath": "",
 				"files": [
-					"js/qrjs*"
+					"js/iframe-lightbox*",
+					"css/iframe-lightbox*"
 				]
 			}
 		]
 	},
 	"dependencies": {
-		"npm": "^6.10.2"
+		"npm": "^6.14.8"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.2.2",
@@ -50,14 +60,18 @@
 		"@babel/plugin-transform-async-to-generator": "^7.2.0",
 		"@babel/plugin-transform-object-assign": "^7.2.0",
 		"@babel/preset-env": "^7.2.0",
-		"browser-sync": "^2.26.7",
+		"browser-sync": "^2.26.12",
 		"gulp": "^4.0.0",
+		"gulp-autoprefixer": "^6.0.0",
 		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^4.0.0",
 		"gulp-cli": "^2.0.1",
 		"gulp-eslint": "^5.0.0",
 		"gulp-plumber": "^1.2.1",
 		"gulp-prettier": "^2.0.0",
 		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sass-lint": "^1.4.0",
 		"gulp-sourcemaps": "^2.6.4",
 		"gulp-strip-debug": "^3.0.0",
 		"gulp-uglify": "^3.0.1"
@@ -66,7 +80,7 @@
 		"test": "gulp lint-libbundle-js"
 	},
 	"email": "englishextra@mail.ru",
-	"url": "https://github.com/englishextra/qrjs/issues",
+	"url": "https://github.com/englishextra/iframe-lightbox/issues",
 	"maintainers": {
 		"name": "Serguei Shimansky",
 		"email": "englishextra@mail.ru",
