@@ -1,30 +1,31 @@
 {
 	"name": "qrjs2",
 	"version": "0.1.7",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
+	},
 	"description": "QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element).",
-	"keywords": [
-		"lightbox",
-		"vanilla-javascript",
-		"vanilla-js",
-		"css",
-		"js",
-		"html",
-		"front-end",
-		"frontend",
-		"pwa",
-		"webapp",
-		"website",
-		"ui",
-		"browser",
-		"iframe",
-		"no-jquery",
-		"no-dependencies",
-		"no-framework",
-		"youtube",
-		"vimeo",
-		"soundcloud",
-		"audiomack"
-	],
+	"keywords": ["lightbox",
+	"vanilla-javascript",
+	"vanilla-js",
+	"css",
+	"js",
+	"html",
+	"front-end",
+	"frontend",
+	"pwa",
+	"webapp",
+	"website",
+	"ui",
+	"browser",
+	"iframe",
+	"no-jquery",
+	"no-dependencies",
+	"no-framework",
+	"youtube",
+	"vimeo",
+	"soundcloud",
+	"audiomack"],
 	"main": "main.js",
 	"window": {
 		"icon": "favicon-32x32.png"
@@ -33,23 +34,17 @@
 		"type": "git",
 		"url": "git://github.com/englishextra/iframe-lightbox.git"
 	},
-	"files": [
-		"js/iframe-lightbox.js",
-		"css/iframe-lightbox.css"
-	],
+	"files": ["js/iframe-lightbox.js",
+	"css/iframe-lightbox.css"],
 	"filename": "js/iframe-lightbox.js",
 	"autoupdate": {
 		"source": "git",
 		"target": "git://github.com/englishextra/iframe-lightbox.git",
-		"fileMap": [
-			{
-				"basePath": "",
-				"files": [
-					"js/iframe-lightbox*",
-					"css/iframe-lightbox*"
-				]
-			}
-		]
+		"fileMap": [{
+			"basePath": "",
+			"files": ["js/iframe-lightbox*",
+			"css/iframe-lightbox*"]
+		}]
 	},
 	"dependencies": {
 		"npm": "^6.14.8"
