@@ -3,7 +3,6 @@
 *.fw.png
 *.map
 *.psd
-*.URL
 *.zip
 .src
 bower_components/
