@@ -1,5 +1,9 @@
 /*jslint node: true */
 /*jslint esversion: 6 */
+/*!
+ * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+ * https://www.electronjs.org/docs/tutorial/security
+ */
 const electron = require("electron");
 const app = electron.app; /* a life cycle module */
 const BrowserWindow = electron.BrowserWindow; /* a browser window module */
@@ -22,6 +26,7 @@ app.on("ready", function () {
 	mainWindow = new BrowserWindow({
 			webPreferences: {
 				contextIsolation: false,
+				worldSafeExecuteJavaScript: true,
 				nodeIntegration: true
 			},
 			width: 844,
