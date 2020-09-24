@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8" />
-	<!-- <meta http-equiv="x-ua-compatible" content="ie=edge" /> -->
-	<meta name="HandheldFriendly" content="True" />
-	<meta name="MobileOptimized" content="320" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>qrjs2 Demo Page</title>
-	<meta name="description" content="" />
-	<meta name="viewport" content="width=device-width" />
-</head>
+<!--
+2. lazyload images
+3. remove font face, display block, opacity 1, visibility visible in critical inline css
+4. set font display swap in font face in css -->
+<html class="no-js" lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<!-- <meta http-equiv="x-ua-compatible" content="ie=edge" /> -->
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; frame-src 'self' https:; img-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>qrjs2 Demo Page</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width" />
+	</head>
 
 	<body>
 		<h1 class="title">qrjs2 Demo</h1>
 		<p>QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element)</p>
 
-	<h2>Demo</h2>
-	<p>
-		<a href="https://codepen.io/englishextra/full/NpwjKW">codepen</a>
-		<a href="https://fiddle.jshell.net/englishextra/Lp37dL94/show/">jsfiddle</a>
-		<a href="https://output.jsbin.com/hobetuh/">jsbin</a>
-	</p>
+		<h2>Demo</h2>
+		<p>
+			<a href="https://codepen.io/englishextra/full/NpwjKW">codepen</a>
+			<a href="https://fiddle.jshell.net/englishextra/Lp37dL94/show/">jsfiddle</a>
+			<a href="https://output.jsbin.com/hobetuh/">jsbin</a>
+		</p>
 
 		<h2>GitHub</h2>
 		<p><a href="https://github.com/englishextra/qrjs2">englishextra/qrjs2</a></p>
@@ -29,56 +33,56 @@
 		<p>Available under <a href="https://opensource.org/licenses/MIT">MIT License</a></p>
 		<script src="./js/qrjs2.js"></script>
 		<script>
-var svgElement = document.createElement("div"),
-u = "https://github.com",
-s = QRCode.generateSVG(u, {
-		ecclevel: "M",
-		fillcolor: "#F2F2F2",
-		textcolor: "#D13438",
-		margin: 4,
-		modulesize: 8
-	});
-svgElement.appendChild(s);
-document.body.appendChild(svgElement);
-if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
-	var dataUriSvgImage = document.createElement("img"),
-	u = "https://github.com",
-	s = QRCode.generateSVG(u, {
-			ecclevel: "M",
-			fillcolor: "#E6E6E6",
-			textcolor: "#486860",
-			margin: 4,
-			modulesize: 8
-		});
-	var XMLS = new XMLSerializer();
-	s = XMLS.serializeToString(s);
-	s = "data:image/svg+xml;base64," + window.btoa(unescape(encodeURIComponent(s)));
-	dataUriSvgImage.src = s;
-	document.body.appendChild(dataUriSvgImage);
-}
-var dataUriPngImage = document.createElement("img"),
-u = "https://github.com",
-s = QRCode.generatePNG(u, {
-		ecclevel: "M",
-		format: "html",
-		fillcolor: "#CCCCCC",
-		textcolor: "#006F94",
-		margin: 4,
-		modulesize: 8
-	});
-dataUriPngImage.src = s;
-document.body.appendChild(dataUriPngImage);
-var htmlTable = document.createElement("div"),
-u = "https://github.com",
-s = QRCode.generateHTML(u, {
-		ecclevel: "M",
-		fillcolor: "#DCDCDC",
-		textcolor: "#5C2E91",
-		margin: 4,
-		modulesize: 8
-	});
-htmlTable.appendChild(s);
-document.body.appendChild(htmlTable);
+			var svgElement = document.createElement("div"),
+			u = "https://github.com",
+			s = QRCode.generateSVG(u, {
+					ecclevel: "M",
+					fillcolor: "#F2F2F2",
+					textcolor: "#D13438",
+					margin: 4,
+					modulesize: 8
+				});
+			svgElement.appendChild(s);
+			document.body.appendChild(svgElement);
+			if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
+				var dataUriSvgImage = document.createElement("img"),
+				u = "https://github.com",
+				s = QRCode.generateSVG(u, {
+						ecclevel: "M",
+						fillcolor: "#E6E6E6",
+						textcolor: "#486860",
+						margin: 4,
+						modulesize: 8
+					});
+				var XMLS = new XMLSerializer();
+				s = XMLS.serializeToString(s);
+				s = "data:image/svg+xml;base64," + window.btoa(unescape(encodeURIComponent(s)));
+				dataUriSvgImage.src = s;
+				document.body.appendChild(dataUriSvgImage);
+			}
+			var dataUriPngImage = document.createElement("img"),
+			u = "https://github.com",
+			s = QRCode.generatePNG(u, {
+					ecclevel: "M",
+					format: "html",
+					fillcolor: "#CCCCCC",
+					textcolor: "#006F94",
+					margin: 4,
+					modulesize: 8
+				});
+			dataUriPngImage.src = s;
+			document.body.appendChild(dataUriPngImage);
+			var htmlTable = document.createElement("div"),
+			u = "https://github.com",
+			s = QRCode.generateHTML(u, {
+					ecclevel: "M",
+					fillcolor: "#DCDCDC",
+					textcolor: "#5C2E91",
+					margin: 4,
+					modulesize: 8
+				});
+			htmlTable.appendChild(s);
+			document.body.appendChild(htmlTable);
 		</script>
 	</body>
 </html>
