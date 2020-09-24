@@ -6,7 +6,6 @@ Based on [lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 [![NPM](https://nodei.co/npm/qrjs2.png?downloads=true)](https://nodei.co/npm/qrjs2/)
 
 [![npm](https://img.shields.io/npm/v/qrjs2.svg)](https://github.com/englishextra/qrjs2)
-[![Bower](https://img.shields.io/bower/v/qrjs2.svg)](https://github.com/englishextra/qrjs2)
 [![Build Status](https://travis-ci.com/englishextra/qrjs2.svg?branch=master)](https://travis-ci.com/englishextra/qrjs2)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/031cf1474c704567afbb07b79ea63d82)](https://www.codacy.com/app/englishextra/qrjs2?utm_source=github.com&utm_medium=referral&utm_content=englishextra/qrjs2&utm_campaign=badger)
 
@@ -38,12 +37,7 @@ Based on [lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 
 ### Install
 
-```
-npm install qrjs2
-```
-```
-bower install qrjs2
-```
+`npm install qrjs2`
 
 ### SVG Element (yeah, give it to me)
 
