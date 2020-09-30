@@ -29,8 +29,8 @@ app.on("ready", function () {
 				worldSafeExecuteJavaScript: true,
 				nodeIntegration: true
 			},
-			width: 844,
-			height: 640,
+			width: 1024,
+			height: 688,
 			icon: "favicon.ico",
 			title: "qrjs2 Demo Page"
 		});
