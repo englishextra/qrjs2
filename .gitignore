@@ -3,7 +3,6 @@
 *.fw.png
 *.psd
 *.zip
-.src
 bower_components/
 maps/
 node_modules/
