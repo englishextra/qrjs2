@@ -46,7 +46,7 @@ babelOptions = {
 /* var beautify = require("gulp-jsbeautifier"); */
 var beautifyOptions;
 beautifyOptions = {
-	/* "config": ".jsbeautifyrc", */
+/* "config": ".jsbeautifyrc", */
 	"editorconfig": false,
 	"indent_size": 4,
 	"indent_char": "\t",
@@ -93,7 +93,7 @@ beautifyOptions = {
 var prettier = require("gulp-prettier");
 var prettierOptions;
 prettierOptions = {
-	/* "config": ".prettierrc", */
+/* "config": ".prettierrc", */
 	"tabWidth": 4,
 	"useTabs": true,
 	"endOfLine": "lf",
@@ -117,7 +117,7 @@ gulp.task("compile-libbundle-js", function () {
 	.pipe(sourcemaps.init())
 	.pipe(babel(babelOptions))
 	.pipe(prettier(prettierOptions))
-	/* .pipe(beautify(beautifyOptions)) */
+/* .pipe(beautify(beautifyOptions)) */
 	.pipe(gulp.dest(options.libbundle.js))
 	.pipe(rename(function (path) {
 			path.basename += ".min";
