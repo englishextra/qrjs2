@@ -15,11 +15,17 @@
  * element = QRCode.generateSVG(data, settings)
  * passes jshint with suppressing comments
  */
+
 /*jslint browser: true */
+
 /*jslint node: true */
+
 /*jshint bitwise: false */
+
 /*jshint shadow: true */
+
 /*jshint sub:true */
+
 /*jshint -W041 */
 (function (root, document) {
 	"use strict";
@@ -632,6 +638,9 @@
 	root.QRCode = QRCode;
 })("undefined" !== typeof window ? window : this, document);
 /*jshint bitwise: true */
+
 /*jshint shadow: false */
+
 /*jshint sub: false */
+
 /*jshint +W041 */

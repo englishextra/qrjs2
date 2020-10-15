@@ -1,4 +1,5 @@
 /*global require */
+
 /*!
  * @see {@link https://github.com/mildrenben/surface/blob/master/gulpfile.js}
  * @see {@link https://www.webstoemp.com/blog/gulp-setup/}
@@ -43,6 +44,7 @@ babelOptions = {
  * if the input/output files reside higher
  * than the config file itself
  */
+
 /* var beautify = require("gulp-jsbeautifier"); */
 var beautifyOptions;
 beautifyOptions = {
