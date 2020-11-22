@@ -84,11 +84,13 @@
 	},
 	"email": "englishextra@mail.ru",
 	"url": "https://github.com/englishextra/iframe-lightbox/issues",
-	"maintainers": [{
-		"name": "Serguei Shimansky",
-		"email": "englishextra@mail.ru",
-		"url": "https://github.com/englishextra"
-	}],
+	"maintainers": [
+		{
+			"name": "Serguei Shimansky",
+			"email": "englishextra@mail.ru",
+			"url": "https://github.com/englishextra"
+		}
+	],
 	"author": {
 		"name": "englishextra",
 		"email": "englishextra@mail.ru",
