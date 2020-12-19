@@ -55,8 +55,7 @@ document.body.appendChild(svgElement);
 
 Will add an SVG element to parent DIV:
 
-```
-svg
+```svg
 <svg viewBox="0 0 264 264" style="shape-rendering:crispEdges">
   <style scoped="scoped">.bg{fill:#FFFFFF}.fg{fill:#373737}</style>
 
