@@ -34,7 +34,7 @@ app.on("ready", function () {
 				worldSafeExecuteJavaScript: true,
 				nodeIntegration: true
 			},
-			width: 1024,
+			width: 1080,
 			height: 688,
 			icon: "favicon.ico",
 			title: "qrjs2 Demo Page"

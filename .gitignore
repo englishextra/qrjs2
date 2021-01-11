@@ -6,5 +6,6 @@
 bower_components/
 maps/
 node_modules/
+package-lock.json
 *.sublime-project
 *.sublime-workspace

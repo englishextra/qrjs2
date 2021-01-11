@@ -4,7 +4,7 @@
  * icon must be PNG, not ICO
  */
 nw.Window.open("index.html", {
-	width: 1024,
+	width: 1080,
 	height: 688,
 	icon: "favicon-32x32.png",
 	title: "qrjs2 Demo Page"
