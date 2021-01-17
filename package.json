@@ -1,9 +1,6 @@
 {
 	"name": "qrjs2",
-	"version": "0.1.7",
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
-	},
+	"version": "0.1.8",
 	"description": "QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element).",
 	"keywords": [
 		"lightbox",
@@ -37,8 +34,8 @@
 		"url": "git://github.com/englishextra/qrjs2.git"
 	},
 	"files": [
-		"js/qrjs2.js",
-		"css/qrjs2.css"
+		"index.html",
+		"js/qrjs2.js"
 	],
 	"filename": "js/qrjs2.js",
 	"autoupdate": {
@@ -48,8 +45,7 @@
 			{
 				"basePath": "",
 				"files": [
-					"js/qrjs2*",
-					"css/qrjs2*"
+					"js/qrjs2*"
 				]
 			}
 		]
