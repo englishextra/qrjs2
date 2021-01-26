@@ -6,7 +6,7 @@ Based on [lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 [![npm](https://img.shields.io/npm/v/qrjs2.svg)](https://www.npmjs.com/package/qrjs2)
 [![Build Status](https://travis-ci.com/englishextra/qrjs2.svg?branch=master)](https://travis-ci.com/englishextra/qrjs2)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/031cf1474c704567afbb07b79ea63d82)](https://www.codacy.com/manual/englishextra/qrjs2/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=englishextra/qrjs2&amp;utm_campaign=Badge_Grade)
-[![](https://data.jsdelivr.com/v1/package/npm/qrjs2/badge)](https://www.jsdelivr.com/package/npm/qrjs2)
+[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/qrjs2/badge)](https://www.jsdelivr.com/package/npm/qrjs2)
 
 ## Demo
 
