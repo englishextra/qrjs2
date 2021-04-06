@@ -131,11 +131,9 @@ Will add an HTML table element to parent DIV:
 
 ```html
 <table style="border:32px solid #FFFFFF;background:#FFFFFF" cellspacing="0" cellpadding="0" border="0">
-
   <tbody>
       <tr>
           <td style="width:8px;height:8px;background:#373737"></td>
-
       ...
     </tr>
   </tbody>
