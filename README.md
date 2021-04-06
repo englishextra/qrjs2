@@ -45,9 +45,7 @@ u = "https://github.com",
 s = QRCode.generateSVG(u, {
     ecclevel: "M",
     fillcolor: "#FFFFFF",
-
     textcolor: "#373737",
-
     margin: 4,
     modulesize: 8
   });
@@ -76,9 +74,7 @@ if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
   s = QRCode.generateSVG(u, {
       ecclevel: "M",
       fillcolor: "#FFFFFF",
-
       textcolor: "#373737",
-
       margin: 4,
       modulesize: 8
     });
@@ -94,9 +90,7 @@ if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
       ecclevel: "M",
       format: "html",
       fillcolor: "#FFFFFF",
-
       textcolor: "#373737",
-
       margin: 4,
       modulesize: 8
     });
@@ -125,9 +119,7 @@ u = "https://github.com",
 s = QRCode.generateHTML(u, {
     ecclevel: "M",
     fillcolor: "#FFFFFF",
-
     textcolor: "#373737",
-
     margin: 4,
     modulesize: 8
   });
