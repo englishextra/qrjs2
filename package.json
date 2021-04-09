@@ -25,14 +25,7 @@
 		"soundcloud",
 		"audiomack"
 	],
-	"main": "main.js",
-	"window": {
-		"icon": "favicon-32x32.png"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/englishextra/qrjs2.git"
-	},
+	"main": "js/qrjs2.js",
 	"files": [
 		"index.html",
 		"js/qrjs2.js"
@@ -41,14 +34,16 @@
 	"autoupdate": {
 		"source": "git",
 		"target": "git://github.com/englishextra/qrjs2.git",
-		"fileMap": [
-			{
-				"basePath": "",
-				"files": [
-					"js/qrjs2*"
-				]
-			}
-		]
+		"fileMap": [{
+			"basePath": "",
+			"files": [
+				"js/qrjs2*"
+			]
+		}]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/englishextra/qrjs2.git"
 	},
 	"dependencies": {
 		"npm": "^7.3.0"
