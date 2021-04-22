@@ -51,21 +51,21 @@
 		<a class="github-fork-ribbon right-top" href="https://github.com/englishextra/qrjs2" title="Fork me on GitHub" data-ribbon="Fork me on GitHub">Fork me on GitHub</a>
 		<script src="./js/qrjs2.js"></script>
 		<script>
-			var svgElement = document.createElement("div"),
-			u = "https://github.com",
-			s = QRCode.generateSVG(u, {
+			var div = document.createElement("div"),
+			text = "https://github.com",
+			qr = QRCode.generateSVG(text, {
 					ecclevel: "M",
 					fillcolor: "#F2F2F2",
 					textcolor: "#D13438",
 					margin: 4,
 					modulesize: 8
 				});
-			svgElement.appendChild(s);
-			document.body.appendChild(svgElement);
+			div.appendChild(qr);
+			document.body.appendChild(div);
 			if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
-				var dataUriSvgImage = document.createElement("img"),
-				u = "https://github.com",
-				s = QRCode.generateSVG(u, {
+				var img = document.createElement("img"),
+				text = "https://github.com",
+				qr = QRCode.generateSVG(text, {
 						ecclevel: "M",
 						fillcolor: "#E6E6E6",
 						textcolor: "#486860",
@@ -73,14 +73,14 @@
 						modulesize: 8
 					});
 				var XMLS = new XMLSerializer();
-				s = XMLS.serializeToString(s);
-				s = "data:image/svg+xml;base64," + window.btoa(unescape(encodeURIComponent(s)));
-				dataUriSvgImage.src = s;
-				document.body.appendChild(dataUriSvgImage);
+				qr = XMLS.serializeToString(qr);
+				qr = "data:image/svg+xml;base64," + window.btoa(unescape(encodeURIComponent(qr)));
+				img.src = qr;
+				document.body.appendChild(img);
 			}
-			var dataUriPngImage = document.createElement("img"),
-			u = "https://github.com",
-			s = QRCode.generatePNG(u, {
+			var img = document.createElement("img"),
+			text = "https://github.com",
+			qr = QRCode.generatePNG(text, {
 					ecclevel: "M",
 					format: "html",
 					fillcolor: "#CCCCCC",
@@ -88,19 +88,19 @@
 					margin: 4,
 					modulesize: 8
 				});
-			dataUriPngImage.src = s;
-			document.body.appendChild(dataUriPngImage);
-			var htmlTable = document.createElement("div"),
-			u = "https://github.com",
-			s = QRCode.generateHTML(u, {
+			img.src = qr;
+			document.body.appendChild(img);
+			var div = document.createElement("div"),
+			text = "https://github.com",
+			qr = QRCode.generateHTML(text, {
 					ecclevel: "M",
 					fillcolor: "#DCDCDC",
 					textcolor: "#5C2E91",
 					margin: 4,
 					modulesize: 8
 				});
-			htmlTable.appendChild(s);
-			document.body.appendChild(htmlTable);
+			div.appendChild(qr);
+			document.body.appendChild(div);
 		</script>
 	</body>
 </html>

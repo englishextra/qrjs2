@@ -40,17 +40,17 @@ Based on [lifthrasiir/qr.js](https://github.com/lifthrasiir/qr.js)
 ### SVG Element (yeah, give it to me)
 
 ```js
-var svgElement = document.createElement("div"),
-u = "https://github.com",
-s = QRCode.generateSVG(u, {
+var div = document.createElement("div"),
+text = "https://github.com",
+qr = QRCode.generateSVG(text, {
     ecclevel: "M",
-    fillcolor: "#FFFFFF",
-    textcolor: "#373737",
+    fillcolor: "#F2F2F2",
+    textcolor: "#D13438",
     margin: 4,
     modulesize: 8
   });
-svgElement.appendChild(s);
-document.body.appendChild(svgElement);
+div.appendChild(qr);
+document.body.appendChild(div);
 ```
 
 Will add an SVG element to parent DIV:
@@ -68,35 +68,31 @@ Will add an SVG element to parent DIV:
 ### Data URI SVG String with Data URI PNG String Fallback
 
 ```js
+var img = document.createElement("img"),
+text = "https://github.com";
 if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
-  var dataUriSvgImage = document.createElement("img"),
-  u = "https://github.com",
-  s = QRCode.generateSVG(u, {
+  var qr = QRCode.generateSVG(text, {
       ecclevel: "M",
-      fillcolor: "#FFFFFF",
-      textcolor: "#373737",
+      fillcolor: "#E6E6E6",
+      textcolor: "#486860",
       margin: 4,
       modulesize: 8
     });
   var XMLS = new XMLSerializer();
-  s = XMLS.serializeToString(s);
-  s = "data:image/svg+xml;base64," + window.btoa(unescape(encodeURIComponent(s)));
-  dataUriSvgImage.src = s;
-  document.body.appendChild(dataUriSvgImage);
+  qr = XMLS.serializeToString(qr);
+  qr = "data:image/svg+xml;base64," + window.btoa(unescape(encodeURIComponent(qr)));
 } else {
-  var dataUriPngImage = document.createElement("img"),
-  u = "https://github.com",
-  s = QRCode.generatePNG(u, {
+  var qr = QRCode.generatePNG(text, {
       ecclevel: "M",
       format: "html",
-      fillcolor: "#FFFFFF",
-      textcolor: "#373737",
+      fillcolor: "#CCCCCC",
+      textcolor: "#006F94",
       margin: 4,
       modulesize: 8
     });
-  dataUriPngImage.src = s;
-  document.body.appendChild(dataUriPngImage);
 }
+img.src = qr;
+document.body.appendChild(img);
 ```
 
 Will add a Data URI SVG string to IMG element's SRC attribute:
@@ -114,17 +110,17 @@ Or a Data URI PNG string to IMG element's SRC attribute:
 ### HTML Table Element
 
 ```js
-var htmlTable = document.createElement("div"),
-u = "https://github.com",
-s = QRCode.generateHTML(u, {
+var div = document.createElement("div"),
+text = "https://github.com",
+qr = QRCode.generateHTML(text, {
     ecclevel: "M",
-    fillcolor: "#FFFFFF",
-    textcolor: "#373737",
+    fillcolor: "#DCDCDC",
+    textcolor: "#5C2E91",
     margin: 4,
     modulesize: 8
   });
-htmlTable.appendChild(s);
-document.body.appendChild(htmlTable);
+div.appendChild(qr);
+document.body.appendChild(div);
 ```
 
 Will add an HTML table element to parent DIV:
