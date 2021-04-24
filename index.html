@@ -51,56 +51,65 @@
 		<a class="github-fork-ribbon right-top" href="https://github.com/englishextra/qrjs2" title="Fork me on GitHub" data-ribbon="Fork me on GitHub">Fork me on GitHub</a>
 		<script src="./js/qrjs2.js"></script>
 		<script>
-			var div = document.createElement("div"),
-			text = "https://github.com",
-			qr = QRCode.generateSVG(text, {
-					ecclevel: "M",
-					fillcolor: "#F2F2F2",
-					textcolor: "#D13438",
-					margin: 4,
-					modulesize: 8
-				});
-			div.appendChild(qr);
-			document.body.appendChild(div);
-			if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
-				var img = document.createElement("img"),
+			(function (document) {
+				"use strict";
+				var div = document.createElement("div"),
 				text = "https://github.com",
 				qr = QRCode.generateSVG(text, {
 						ecclevel: "M",
-						fillcolor: "#E6E6E6",
-						textcolor: "#486860",
+						fillcolor: "#F2F2F2",
+						textcolor: "#D13438",
 						margin: 4,
 						modulesize: 8
 					});
-				var XMLS = new XMLSerializer();
-				qr = XMLS.serializeToString(qr);
-				qr = "data:image/svg+xml;base64," + window.btoa(unescape(encodeURIComponent(qr)));
+				div.appendChild(qr);
+				document.body.appendChild(div);
+			})(document);
+			(function (root, document) {
+				if (document.implementation.hasFeature("http://www.w3.org/2000/svg","1.1")) {
+					var img = document.createElement("img"),
+					text = "https://github.com",
+					qr = QRCode.generateSVG(text, {
+							ecclevel: "M",
+							fillcolor: "#E6E6E6",
+							textcolor: "#486860",
+							margin: 4,
+							modulesize: 8
+						});
+					var XMLS = new XMLSerializer();
+					qr = XMLS.serializeToString(qr);
+					qr = "data:image/svg+xml;base64," + root.btoa(unescape(encodeURIComponent(qr)));
+					img.src = qr;
+					document.body.appendChild(img);
+				}
+			})("undefined" !== typeof window ? window : this, document);
+			(function (document) {
+				var img = document.createElement("img"),
+				text = "https://github.com",
+				qr = QRCode.generatePNG(text, {
+						ecclevel: "M",
+						format: "html",
+						fillcolor: "#CCCCCC",
+						textcolor: "#006F94",
+						margin: 4,
+						modulesize: 8
+					});
 				img.src = qr;
 				document.body.appendChild(img);
-			}
-			var img = document.createElement("img"),
-			text = "https://github.com",
-			qr = QRCode.generatePNG(text, {
-					ecclevel: "M",
-					format: "html",
-					fillcolor: "#CCCCCC",
-					textcolor: "#006F94",
-					margin: 4,
-					modulesize: 8
-				});
-			img.src = qr;
-			document.body.appendChild(img);
-			var div = document.createElement("div"),
-			text = "https://github.com",
-			qr = QRCode.generateHTML(text, {
-					ecclevel: "M",
-					fillcolor: "#DCDCDC",
-					textcolor: "#5C2E91",
-					margin: 4,
-					modulesize: 8
-				});
-			div.appendChild(qr);
-			document.body.appendChild(div);
+			})(document);
+			(function (document) {
+				var div = document.createElement("div"),
+				text = "https://github.com",
+				qr = QRCode.generateHTML(text, {
+						ecclevel: "M",
+						fillcolor: "#DCDCDC",
+						textcolor: "#5C2E91",
+						margin: 4,
+						modulesize: 8
+					});
+				div.appendChild(qr);
+				document.body.appendChild(div);
+			})(document);
 		</script>
 	</body>
 </html>
