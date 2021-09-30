@@ -45,9 +45,7 @@
 		"type": "git",
 		"url": "git://github.com/englishextra/qrjs2.git"
 	},
-	"dependencies": {
-		"npm": "^7.3.0"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@babel/core": "^7.12.10",
 		"@babel/plugin-transform-arrow-functions": "^7.12.1",
@@ -69,6 +67,9 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-strip-debug": "^3.0.0",
 		"gulp-uglify": "^3.0.2"
+	},
+	"engines": {
+		"npm": "7.x"
 	},
 	"scripts": {
 		"test": "gulp lint-libbundle-js"
