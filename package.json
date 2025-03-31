@@ -1,6 +1,6 @@
 {
 	"name": "qrjs2",
-	"version": "0.1.11",
+	"version": "0.1.12",
 	"description": "QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element).",
 	"keywords": [
 		"lightbox",
@@ -69,7 +69,7 @@
 		"gulp-uglify": "^3.0.2"
 	},
 	"engines": {
-		"npm": "7.x"
+		"npm": ">=7.x"
 	},
 	"scripts": {
 		"test": "gulp lint-libbundle-js"
