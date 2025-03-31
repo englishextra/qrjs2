@@ -1,7 +1,7 @@
 {
 	"name": "qrjs2",
 	"version": "0.1.12",
-	"description": "QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element).",
+	"description": "QR code generating with vanilla js (SVG Element, Data URI SVG String, Data URI PNG String, HTML Table Element)",
 	"keywords": [
 		"lightbox",
 		"vanilla-javascript",
